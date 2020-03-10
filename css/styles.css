@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: monospace;
+}
+
+header {
+    top: 0;
+    left: 0;
+    position: fixed;
+
+    height: 10vh;
+    width: 100vw;
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-between;
+
+    background-color: cornflowerblue;
+}

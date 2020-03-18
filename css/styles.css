@@ -133,3 +133,42 @@ footer ul{
 footer a {
     color: #FFFEFE;
 }
+
+
+
+
+/* -------------- cadastro.html styles ------------------ */
+
+section.formulario {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+section.formulario form {
+    width: 60vw;
+    box-shadow: 0 0 2px #40476D;
+
+    padding: 50px;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section.formulario form > * {
+    width: 50%;
+}
+
+section.formulario form > * > label {
+    display: block;
+    font-size: 11px;
+    margin: 5px 0;
+}
+
+
+section.formulario form #enviar {
+    margin-top: 40px;
+    width: 100px;
+    height: 30px;
+    
+}

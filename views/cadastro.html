@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#"> Fornecedor</a>
+                </li>
+                <li>
+                    <a href="#">Cliente</a>
+                </li>
+                <li>
+                    <a href="#">Em Aberto</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="logo">
+            <img src="" alt="Logo da Orca">
+        </div>
+        <div>
+            <a href="#">Nossa História</a>
+        </div>
+    </header>
+    
+    <!-- A primeiro cadastro coletar apenas informações essênciais -->
+    <section class="formulario">
+        <form action="submit" method="post">
+            <h2>Cadastro no Sistema</h2>
+            <div>
+                <input id="dataDeCadastramento" type="hidden" value="javascript:new Date()">
+            </div>
+            <div>
+                <label for="nome">Nome</label>
+                <input name="nome" id="nome" type="text">
+            </div>
+            <div>
+                <label for="sobrenome">Sobrenome</label>
+                <input name="sobrenome" id="sobrenome" type="text">
+            </div>
+            <div>
+                <label for="perfil">Foto de Perfil</label>
+                <input name="perfil" id="perfil" type="file">
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input name="email" id="email" type="email">
+            </div>
+            <div>
+                <label for="cpf">CPF</label>
+                <input name="cpf" id="cpf" type="number">
+            </div>
+            <div>
+                <label for="cpnj">CNPJ</label>
+                <input name="cpnj" id="cpnj" type="number">
+            </div>
+            <div>
+                <label for="celular">Celular</label>
+                <input name="celular" id="celular" type="tel">
+            </div>
+            <div>
+                <label for="endereco">Endereço</label>
+                <input name="endereco" id="endereco" type="text">
+            </div>
+            <div>
+                <label for="cep">CEP</label>
+                <input name="cep" id="cep" type="number">
+            </div>
+            <div>
+                <label for="UF">UF</label>
+                <input name="UF" id="UF" type="text">
+            </div>
+            <div>
+                <label for="pais">País</label>
+                <select name="pais" id="pais">
+                    <option value="br">Brasil</option>
+                    <option value="pt">Portugal</option>
+                    <option value="es">Espanha</option>
+                </select>
+            </div>
+            <div>
+                <label for="cidade">Cidade</label>
+                <input name="cidade" id="cidade" type="text">
+            </div>
+            <div>
+                <label for="bairro">Bairro</label>
+                <input name="bairro" id="bairro" type="text">
+            </div>
+            <div>
+                <label for="complemento">Complemento</label>
+                <input name="complemento" id="complemento" type="text">
+            </div>
+            <div>
+                <label for="rg">RG</label>
+                <input name="rg" id="rg" type="text">
+            </div>
+            <div>
+                <label for="estado civil">Estado Civil</label>
+                <input name="estado" id="estado civil" type="text">
+            </div>
+            <div>
+                <label for="naturalidade">Naturalidade</label>
+                <input name="naturalidade" id="naturalidade" type="text">
+            </div>
+            <div>
+                <label for="apelido">Apelido</label>
+                <input name="apelido" id="apelido" type="text">
+            </div>
+            <div>
+                <label for="login">Login</label>
+                <input name="login" id="login" type="text">
+            </div>
+            <div>
+                <label for="senha">Senha</label>
+                <input name="senha" id="senha" type="password">
+            </div>
+            <div>
+                <label for="dataDeNascimento">Data de Nascimento</label>
+                <input name="dataDeNascimento" id="dataDeNascimento" type="date">
+            </div>
+            <div>
+                <label for="fornecedor">É fornecedor?</label>
+                <select name="fornecedor" id="fornecedor">
+                    <option value="false">NÃO</option>
+                    <option value="true">SIM</option>
+                </select>
+            </div>
+            <div><input id="enviar" type="submit" value="ENVIAR"></div>
+        </form>
+    </section>
+
+    <footer>
+        <section>
+            <img src="" alt="Logo">
+            <p>dolor sit amet</p>
+            <p>Copyrigth. Todos os direitos reservados</p>
+        </section>
+        <section>
+            <ul>
+                <li>
+                    <a href="">Parceiros</a>
+                </li>
+                <li>
+                    <a href="">Contatos</a>
+                </li>
+                <li>
+                    <a href="">Trabalhe Conosco</a>
+                </li>
+            </ul>
+        </section>
+    </footer>
+</body>
+
+</html>

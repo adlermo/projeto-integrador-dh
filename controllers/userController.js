@@ -29,5 +29,9 @@ module.exports = {
 		} else {
 			res.render("erros/usuarioNaoEncontrado",{id:req.params.id});
 		}
-	}
+    },
+    cadastrarUsuario:  (req, res) => {
+        console.log(req.body);
+        res.send("recieved your request!");
+     }
 }

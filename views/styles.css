@@ -1,0 +1,53 @@
+/* -------------- Dashboard.style ------------------ */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #40476d;
+}
+#check{
+    display: none;
+}
+#icone{
+    cursor: pointer;
+    padding: 15px;
+    position: abosule;
+    z-index: 1;
+}
+
+.barra{
+    background-color: #f4faff;
+    height: 100%;
+    width: 300px;
+    position: absolute;
+    transition: all .2s linear;
+}
+
+nav{
+    width: 100%;
+    position: absolute;
+    top: 60px;
+}
+nav a{
+    text-decoration: none;
+}
+
+.link{
+    padding: 15px; 
+    font-family: 'Arial';
+    font-size: 12pt;
+    transition: all .2s linear;
+    color: white;
+    border-bottom: 2px solid rgb(79, 179, 29);*/
+}
+
+.link:hover{
+    background-color: #08dfea;
+}
+
+check:checked ~ .barra{
+    transform: translate(300px);
+}
+

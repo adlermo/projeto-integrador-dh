@@ -173,3 +173,32 @@ section.formulario form #enviar {
     height: 30px;
     
 }
+
+/* -------------- Dashboard.style ------------------ */
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style:none;
+    box-sizing: border-box;
+}
+body{
+    font-family: montserrat;
+}
+nav{
+    background: #00b4e6;
+    height: 80px;
+    width: 100%;
+}
+lbael.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}

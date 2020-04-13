@@ -1,0 +1,141 @@
+*{
+    background-color: #40476d
+}
+
+.layout {
+    display: grid;
+    grid-template-areas: 
+      "h h h"
+      "s m m"
+      "f f f";
+}
+
+.h {
+    grid-area: h;
+    background-color: brown;
+}
+.f {
+    grid-area: f;
+    background-color: yellow;
+}
+.m {
+    grid-area: m;
+    background-color: red;
+}
+.s {
+    grid-area: s;
+    background-color: blue;
+}
+
+.row{
+    float: left;
+    background-color:#f4faff;
+}
+
+.col-3{
+    margin-left: 10px;
+    color:white;
+}
+
+.nav-flex-column-nav-pills{
+    background-color: white;
+}
+
+.tab{
+    background-color: red;
+}
+
+.pills{
+    background-color: yellow;
+}
+
+.card-deck{
+    width: 1000px;
+    height: 400px;
+    background-color: white;
+    margin-left: 250px;
+    margin-top: 100px;
+    margin-right: 100px;
+    border-radius: 10px;
+}
+
+.card{
+    margin-left: 500px;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 350px;
+    max-width: 200px;
+    background-color: #07beb8;
+    box-shadow: 0px 0px 10px rgb(132, 132, 132);
+    transform: scale(1);
+    animation: pulse 2s infinite;
+}
+
+/*.card:nth-of-type(2){
+    background: red;
+    }
+*/
+.card:hoover{
+    background-color: black;
+}
+
+
+.card-body{
+    max-width: 200px;
+    background-color: #07beb8;
+}
+
+.card-footer{
+    color: white;
+    background-color: #07beb8;
+}
+
+.card-title{
+    color: white;
+    background-color: #07beb8;;
+}
+
+.card-text{
+    background-color: #07beb8;
+    color: white;
+}
+
+.text-muted{
+    color: white;
+    background-color: #07beb8;
+}
+
+.top{
+    float: left;
+    background-color: #45d2cd;
+    height: 50px;
+    width: 50px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.IoIosArrowDown{
+    background-color: #45d2cd; 
+}
+
+.perfil {
+    float: right;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    border: white;
+}
+
+.Container{
+    grid-area: h;
+    background-color: yellow;
+}
+
+.Col{
+    background-color: red;
+}
+
+#Row{
+    background-color:Blue;
+}

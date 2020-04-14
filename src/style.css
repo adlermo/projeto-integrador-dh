@@ -28,16 +28,17 @@
 }
 
 .row{
-    float: left;
-    background-color:#f4faff;
+    margin-left: 0px;
+    background-color:blue;
 }
 
 .col-3{
-    margin-left: 10px;
-    color:white;
+    float: left;
+    color:yellow;
 }
 
 .nav-flex-column-nav-pills{
+    margin-left: 20px;
     background-color: white;
 }
 
@@ -50,6 +51,8 @@
 }
 
 .card-deck{
+    display: flex;
+    justify-content: space-evenly;
     width: 1000px;
     height: 400px;
     background-color: white;
@@ -60,7 +63,7 @@
 }
 
 .card{
-    margin-left: 500px;
+    margin-left: 600px;
     margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -70,6 +73,7 @@
     box-shadow: 0px 0px 10px rgb(132, 132, 132);
     transform: scale(1);
     animation: pulse 2s infinite;
+    overflow: hidden;
 }
 
 /*.card:nth-of-type(2){
@@ -87,6 +91,8 @@
 }
 
 .card-footer{
+    display: flex;
+    justify-content: center;
     color: white;
     background-color: #07beb8;
 }
@@ -112,11 +118,10 @@
     height: 50px;
     width: 50px;
     margin-top: 10px;
-    margin-left: 10px;
 }
 
-.IoIosArrowDown{
-    background-color: #45d2cd; 
+.arrowDown{
+    background-color: #07beb8; 
 }
 
 .perfil {
@@ -124,11 +129,10 @@
     border-radius: 50%;
     height: 80px;
     width: 80px;
-    border: white;
+    border: 2px solid #dbdbdb;
 }
 
 .Container{
-    grid-area: h;
     background-color: yellow;
 }
 
@@ -138,4 +142,11 @@
 
 #Row{
     background-color:Blue;
+}
+
+Card-Header{
+    align-items: flex-end;
+    justify-content: space-evenly;
+    display: flex;
+    background-color: #07beb8; 
 }

@@ -14,13 +14,27 @@ import './style.css'
 // render() {
 const Licitacoes = () => (
     <CardDeck>
+            <Card-Titular>
+                <Card.Img className="top" src={box} alt="Imagem Box" />
+                <Card.Title>Licitação A</Card.Title>
+            </Card-Titular>
+        <Card-Mother>
+            <Card.Body>
+                <Card.Text>2 Macbooks</Card.Text>
+                <Card.Text>3 Impressoras</Card.Text>
+                <Card.Text>4 Celulares</Card.Text>
+            </Card.Body>
+
+        </Card-Mother>
         <Card>
             <Card-Header>
                 <Card.Img className="top" src={box} alt="Imagem Box" />
-                <Card.Title>Card title</Card.Title>
+                <Card.Title>Fornecedor X</Card.Title>
             </Card-Header>
             <Card.Body>
-                <Card.Text>Testing o que eu quiser! supporting text below as a natural lead-in to additional content. This content is a little bit longer.</Card.Text>
+                <Card.Text>Item 1 - R$ 2.000,00</Card.Text>
+                <Card.Text>Item 2 - R$ 2.000,00</Card.Text>
+                <Card.Text>Item 3 - R$ 2.000,00</Card.Text>
             </Card.Body>
             <Card.Footer>
                 <IoIosArrowDown className="arrowDown" />
@@ -30,10 +44,12 @@ const Licitacoes = () => (
         <Card>
             <Card-Header>
                 <Card.Img className="top" src={box} alt="Imagem Box" />
-                <Card.Title>Card title</Card.Title>
+                <Card.Title>Fornecedor Y</Card.Title>
             </Card-Header>
             <Card.Body>
-                <Card.Text>This card has supporting text below as a natural lead-in to additional content.{' '}</Card.Text>
+                <Card.Text>Item 1 - R$ 2.000,00</Card.Text>
+                <Card.Text>Item 2 - R$ 2.000,00</Card.Text>
+                <Card.Text>Item 3 - R$ 2.000,00</Card.Text>
             </Card.Body>
             <Card.Footer>
                 <IoIosArrowDown className="arrowDown" />
@@ -43,10 +59,12 @@ const Licitacoes = () => (
         <Card>
             <Card-Header>
                 <Card.Img className="top" src={box} alt="Imagem Box" />
-                <Card.Title>Card title</Card.Title>
+                <Card.Title>Fornecedor Z</Card.Title>
             </Card-Header>
             <Card.Body>
-                <Card.Text>This is a wider card with supporting text below as a natural lead-in to additional content.</Card.Text>
+                <Card.Text>Item 1 - R$ 2.000,00</Card.Text>
+                <Card.Text>Item 2 - R$ 2.000,00</Card.Text>
+                <Card.Text>Item 3 - R$ 2.000,00</Card.Text>
             </Card.Body>
             <Card.Footer>
                 <IoIosArrowDown className="arrowDown" />

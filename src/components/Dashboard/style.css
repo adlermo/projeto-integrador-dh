@@ -124,18 +124,6 @@
     background-color: #07beb8; 
 }
 
-.perfil {
-    float: right;
-    border-radius: 50%;
-    height: 80px;
-    width: 80px;
-    border: 2px solid #dbdbdb;
-}
-
-.Container{
-    background-color: yellow;
-}
-
 .Col{
     background-color: red;
 }
@@ -149,4 +137,7 @@ Card-Header{
     justify-content: space-evenly;
     display: flex;
     background-color: #07beb8; 
+}
+Card-Mother{
+    color:blue;
 }

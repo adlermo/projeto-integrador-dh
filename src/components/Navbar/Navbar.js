@@ -13,7 +13,6 @@ export default function NavBar() {
     }
 
     return (
-
         <div className={`wrapper ${expandir}`}>
             <div className="top_navbar">
                 <div

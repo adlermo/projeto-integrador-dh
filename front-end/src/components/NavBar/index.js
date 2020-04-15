@@ -2,6 +2,8 @@ import React, { Component, useState } from 'react';
 import { FiArchive, FiCoffee, FiGithub, FiLayout, FiGrid } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import orcaLogo from '../../assets/img/logo-site.png';
+import profile from '../../assets/img/perfil.jpg';
+import { Nav, Navbar, Form, FormControl } from 'react-bootstrap';
 
 import './styles.css';
 
@@ -26,23 +28,16 @@ export default function NavBar() {
                 </div>
                 <div className="top_menu">
                     <div>
-                        <img className="logo" src={ orcaLogo } alt="Logo Orca"/>
+                        <div className="page">Solicitações</div>
+                        <Form className="form-center">
+                             <FormControl type="text" placeholder="Pesquisar" className="textSearch" />
+                        </Form>
                     </div>
 
                     <ul>
                         <li>
                             <Link to="/logon">
-                                <FiCoffee/> 
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="#">
-                                <FiArchive />
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="#">
-                            <FiGrid />
+                                <img className="profile" src={profile} />  
                             </Link>
                         </li>
                     </ul>
@@ -75,13 +70,6 @@ export default function NavBar() {
                 </ul>
             </div>
 
-                <div className="main_container">
-                    {/* <Counter /> */}
-                    <div className="item">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut sapiente adipisci nemo atque eligendi
-                        reprehenderit minima blanditiis eum quae aspernatur!
-                        </div>
-                </div>
             </div>
 
     )

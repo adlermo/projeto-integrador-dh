@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.9.10",
     "@react-native-community/masked-view": "^0.1.8",
     "@react-navigation/native": "^5.1.5",
     "@testing-library/jest-dom": "^4.2.4",

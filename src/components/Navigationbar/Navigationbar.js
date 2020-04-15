@@ -5,7 +5,7 @@ import perfil from "../../assets/perfil.jpg"
 
 export const Navigationbar = () => (
     <Navbar expand="lg">
-      <Navbar.Brand href="/">Solicitações</Navbar.Brand>
+      <Navbar.Brand className="Navbar-Brand" href="/">Solicitações</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav"/>
       <Form className="form-center">
         <FormControl type="text" placeholder="Pesquisar" className="textSearch" />

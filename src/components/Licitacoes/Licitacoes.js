@@ -14,18 +14,21 @@ import './style.css'
 // render() {
 const Licitacoes = () => (
     <CardDeck>
+
+        <Card>
             <Card-Titular>
                 <Card.Img className="top" src={box} alt="Imagem Box" />
                 <Card.Title>Licitação A</Card.Title>
             </Card-Titular>
-        <Card-Mother>
+        <Card-Mother className="Card-Mother">
             <Card.Body>
                 <Card.Text>2 Macbooks</Card.Text>
                 <Card.Text>3 Impressoras</Card.Text>
                 <Card.Text>4 Celulares</Card.Text>
             </Card.Body>
-
         </Card-Mother>
+        </ Card>
+
         <Card>
             <Card-Header>
                 <Card.Img className="top" src={box} alt="Imagem Box" />

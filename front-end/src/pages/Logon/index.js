@@ -34,7 +34,7 @@ export default function Logon(){
                 {/* <img src={ heroesLogo } alt="Be The Hero"/> */}
                 
                 <form> 
-                    <h1> Faça seu logon</h1>
+                    <h1>Faça seu logon</h1>
                     
                     <input 
                         placeholder="Seu e-mail" 

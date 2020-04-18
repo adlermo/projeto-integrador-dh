@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import orcaLogo from '../../assets/img/logo-site.png';
 
 import './styles.css';
+import Body from '../Body';
 
 export default function NavBar() {
 
@@ -13,7 +14,6 @@ export default function NavBar() {
     }
 
     return (
-
         <div className={`wrapper ${expandir}`}>
             <div className="top_navbar">
                 <div
@@ -26,13 +26,13 @@ export default function NavBar() {
                 </div>
                 <div className="top_menu">
                     <div>
-                        <img className="logo" src={ orcaLogo } alt="Logo Orca"/>
+                        <img className="logo" src={orcaLogo} alt="Logo Orca" />
                     </div>
 
                     <ul>
                         <li>
                             <Link to="/logon">
-                                <FiCoffee/> 
+                                <FiCoffee />
                             </Link>
                         </li>
                         <li>
@@ -42,7 +42,7 @@ export default function NavBar() {
                         </li>
                         <li>
                             <Link to="#">
-                            <FiGrid />
+                                <FiGrid />
                             </Link>
                         </li>
                     </ul>
@@ -60,7 +60,7 @@ export default function NavBar() {
 
                     <li>
                         <Link to="#">
-                            <span className="icon"><FiGithub/></span>
+                            <span className="icon"><FiGithub /></span>
                             <span className="title">Texto</span>
                         </Link>
                     </li>
@@ -70,19 +70,16 @@ export default function NavBar() {
                             <span className="icon"><FiLayout /></span>
                             <span className="title">Texto</span>
                         </Link>
-                    </li>                
+                    </li>
 
                 </ul>
             </div>
 
-                <div className="main_container">
-                    {/* <Counter /> */}
-                    <div className="item">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut sapiente adipisci nemo atque eligendi
-                        reprehenderit minima blanditiis eum quae aspernatur!
-                        </div>
-                </div>
+            <div className="main_container">
+                {/* <Counter /> */}
+                <Body name="Register" />
             </div>
+        </div>
 
     )
 }

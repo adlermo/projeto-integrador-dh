@@ -138,6 +138,8 @@ Card-Header{
     display: flex;
     background-color: #07beb8; 
 }
-Card-Mother{
+.Card-Mother{
     color:blue;
+    background-color: yellow;
+
 }

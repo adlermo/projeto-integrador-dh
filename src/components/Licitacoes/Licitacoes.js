@@ -15,7 +15,7 @@ import './style.css'
 const Licitacoes = () => (
     <CardDeck>
 
-        <Card>
+        <Card className="cardTitular">
             <Card-Titular>
                 <Card.Img className="top" src={box} alt="Imagem Box" />
                 <Card.Title>Licitação A</Card.Title>

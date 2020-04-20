@@ -20,30 +20,31 @@
 .wrapper .top_navbar .hamburger{
     width: 70px;
     height: 100%;
-    background: var(--azul-escuro);
+    background-color: #f4faff;
     padding: 15px 17px;
     border-top-left-radius: 20px;
     cursor: pointer;
+    
 }
 
 .wrapper .top_navbar .hamburger div{
     width: 35px;
     height: 4px;
-    background: var(--branco);
+    background-color: #40476d;;
     margin: 5px 0;
     border-radius: 5px;
 }
 
+
 .wrapper .top_navbar .top_menu{
     width: calc(100% - 70px);
     height: 100%;
-    background: #fff;
     border-top-right-radius: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+/*    box-shadow: 0 1px 1px rgba(0,0,0,0.1); */
 }
 
 .wrapper .top_navbar .top_menu .logo{
@@ -66,6 +67,18 @@
     color: var(--azul-escuro);
 }
 
+.profile{
+    display: block;
+    margin: 0 10px;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border: 1px solid var(--azul-escuro);
+    border-radius: 50%;
+    color: var(--azul-escuro);
+}
+
 .wrapper .top_navbar .top_menu ul li a:hover{
     background: var(--azul-escuro);
     color: var(--branco);
@@ -75,11 +88,18 @@
     color: #fff;
 }
 
+.form-center {
+    position: absolute !important;
+    left: 25%;
+    right: 25%;
+    justify-content: space-evenly;
+  }
+
 .wrapper .sidebar{
     position: fixed;
     top: 70px;
     left: 10px;
-    background: var(--azul-escuro);
+    background-color: #f4faff;
     width: 195px;
     height: calc(100% - 80px);
     border-bottom-left-radius: 20px;
@@ -109,7 +129,7 @@
 .wrapper .sidebar ul li a span.icon{
     margin-right: 10px;
     display: inline-block;
-    color: var(--branco);
+    color: #40476d;
 }
 
 .wrapper .sidebar ul li a span.title{
@@ -162,4 +182,9 @@
 .wrapper.fechado .main_container{
     width: (100% - 70px);
     margin-left: 70px;
+}
+
+.page{
+    color: white;
+    font-size: 20px;
 }

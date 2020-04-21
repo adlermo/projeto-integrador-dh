@@ -77,7 +77,7 @@ export default function NavBar() {
 
             <div className="main_container">
                 {/* <Counter /> */}
-                <Body name="Register" />
+                <Body name="Overview" />
             </div>
         </div>
 

@@ -5,6 +5,8 @@ import { IoIosPeople, IoIosArrowForward, IoIosStar, IoIosStarOutline } from "rea
 import './styles.css'
 
 export default class Overview extends Component {
+
+    // Function fills the classification given by param
     rate = (grade = 4) => {
         let classificacao = []
         for (let i = 0; i < 5; i++) {

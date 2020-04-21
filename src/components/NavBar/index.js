@@ -29,15 +29,15 @@ export default function NavBar() {
                 <div className="top_menu">
                     <div>
                         <div className="page">Solicitações</div>
-                        <Form className="form-center">
-                             <FormControl type="text" placeholder="Pesquisar" className="textSearch" />
-                        </Form>
                     </div>
+                    <Form style={{width: '60%'}}>
+                        <FormControl type="text" placeholder="Pesquisar" className="textSearch" />
+                    </Form>
 
                     <ul>
                         <li>
                             <Link to="/logon">
-                                <img className="profile" src={profile} />  
+                                <img className="profile" src={profile} />
                             </Link>
                         </li>
                     </ul>
@@ -55,7 +55,7 @@ export default function NavBar() {
 
                     <li>
                         <Link to="#">
-                            <span className="icon"><FiGithub/></span>
+                            <span className="icon"><FiGithub /></span>
                             <span className="title">Texto</span>
                         </Link>
                     </li>
@@ -65,12 +65,12 @@ export default function NavBar() {
                             <span className="icon"><FiLayout /></span>
                             <span className="title">Texto</span>
                         </Link>
-                    </li>                
+                    </li>
 
                 </ul>
             </div>
 
-            </div>
+        </div>
 
     )
 }

@@ -2,6 +2,8 @@ import React, { Component } from "react";
 
 import { IoIosPeople, IoIosArrowForward, IoIosStar, IoIosStarOutline } from "react-icons/io";
 
+import Donut from "../Donut"
+
 import './styles.css'
 
 export default class Overview extends Component {
@@ -22,6 +24,10 @@ export default class Overview extends Component {
     render() {
         return <>
             <section className='card-container'>
+                {/* TO DO: loop printing each card item */}
+
+                <Donut className='card-item' />
+
                 <div className='card-item'>
                     <div className="company-profile">
                         <IoIosPeople />
@@ -35,6 +41,7 @@ export default class Overview extends Component {
                         <IoIosArrowForward />
                     </div>
                 </div>
+
                 <div className='card-item'>
                     <div className="company-profile">
                         <IoIosPeople />
@@ -48,6 +55,7 @@ export default class Overview extends Component {
                         <IoIosArrowForward />
                     </div>
                 </div>
+
                 <div className='card-item'>
                     <div className="company-profile">
                         <IoIosPeople />
@@ -61,6 +69,7 @@ export default class Overview extends Component {
                         <IoIosArrowForward />
                     </div>
                 </div>
+
                 <div className='card-item'>
                     <div className="company-profile">
                         <IoIosPeople />
@@ -74,6 +83,21 @@ export default class Overview extends Component {
                         <IoIosArrowForward />
                     </div>
                 </div>
+
+                <div className='card-item'>
+                    <div className="company-profile">
+                        <IoIosPeople />
+                    </div>
+                    <div className="company-data">
+                        <p>Nome Empresa</p>
+                        <p>example@company.org</p>
+                    </div>
+                    <div className="company-options">
+                        <p>{this.rate(1)}</p>
+                        <IoIosArrowForward />
+                    </div>
+                </div>
+
                 <div className='card-item'>
                     <div className="company-profile">
                         <IoIosPeople />
@@ -87,6 +111,8 @@ export default class Overview extends Component {
                         <IoIosArrowForward />
                     </div>
                 </div>
+
+                {/* Loop closure */}
             </section>
         </>
     }

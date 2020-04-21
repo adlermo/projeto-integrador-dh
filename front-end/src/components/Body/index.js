@@ -3,8 +3,9 @@ import React, { Component } from 'react';
 import './styles.css'
 
 import Register from '../../pages/Register'
-import Licitacoes from '../../pages/Licitacoes';
+import Orcamentos from '../../pages/Orcamentos';
 import Overview from '../../pages/Overview';
+import Donut from '../../pages/Donut';
 
 export default class Body extends Component {
     constructor(props) {
@@ -12,19 +13,22 @@ export default class Body extends Component {
         this.state = {
             text: <div className='item'>Oops, an error ocurred!</div>,
             register: <Register />,
-            licitacoes: <Licitacoes />,
+            orcamentos: <Orcamentos />,
             overview: <Overview />,
+            donut: <Donut />,
         }
     }
 
-    select = () => {
-        switch (this.props.name) {
-            case "Licitacoes":
-                return this.state.licitacoes;
+    select = (page) => {
+        switch (page) {
+            case "Orcamentos":
+                return this.state.orcamentos;
             case "Register":
                 return this.state.register;
             case "Overview":
                 return this.state.overview;
+            case "Donut":
+                return this.state.donut;
             default:
                 return this.state.text;
         }
@@ -32,7 +36,7 @@ export default class Body extends Component {
 
     render() {
         return <>
-            {this.select()}
+            {this.select(this.props.name)}
         </>
     }
 }

@@ -1,0 +1,62 @@
+[
+    {
+    "atividade_principal": [
+      {
+        "text": "Comércio varejista de artigos de papelaria",
+        "code": "47.61-0-03"
+      }
+    ],
+    "data_situacao": "18/10/2006",
+    "complemento": "LOJA 1A",
+    "nome": "BAZAR NOVIDADES COMERCIO DE PAPELARIA E BRINQUEDOS LTDA",
+    "uf": "RJ",
+    "telefone": "(24) 3369-3578",
+    "atividades_secundarias": [
+      {
+        "text": "Comercio varejista de artigos de armarinho",
+        "code": "47.55-5-02"
+      },
+      {
+        "text": "Comércio varejista de brinquedos e artigos recreativos",
+        "code": "47.63-6-01"
+      }
+    ],
+    "qsa": [
+      {
+        "qual": "49-Sócio-Administrador",
+        "nome": "LUIZ SERGIO FREITAS PINTO JUNIOR"
+      },
+      {
+        "qual": "49-Sócio-Administrador",
+        "nome": "JANE ANDREIA DE PAULA"
+      }
+    ],
+    "situacao": "ATIVA",
+    "bairro": "FRADE",
+    "logradouro": "R SAO SEBASTIAO",
+    "numero": "131",
+    "cep": "23.946-010",
+    "municipio": "ANGRA DOS REIS",
+    "porte": "MICRO EMPRESA",
+    "abertura": "18/10/2006",
+    "natureza_juridica": "206-2 - Sociedade Empresária Limitada",
+    "cnpj": "08.366.082/0001-02",
+    "ultima_atualizacao": "2020-03-08T16:55:29.801Z",
+    "status": "OK",
+    "tipo": "MATRIZ",
+    "fantasia": "",
+    "email": "",
+    "efr": "",
+    "motivo_situacao": "",
+    "situacao_especial": "",
+    "data_situacao_especial": "",
+    "capital_social": "15000.00",
+    "extra": {
+      
+    },
+    "billing": {
+      "free": true,
+      "database": true
+    }
+  }
+]

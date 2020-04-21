@@ -111,6 +111,14 @@ Card-Header{
     display: flex;
     background-color: #07beb8; 
 }
+
+Card-Titular{
+    align-items: flex-end;
+    justify-content: space-evenly;
+    display: flex;
+    background-color: #07beb8; 
+}
+
 Card-Mother{
     color:blue;
 }

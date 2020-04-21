@@ -15,13 +15,9 @@ export default function NavBar() {
     }
 
     return (
-
         <div className={`wrapper ${expandir}`}>
             <div className="top_navbar">
-                <div
-                    className="hamburger"
-                    onClick={menuAtivo}
-                >
+                <div className="hamburger" onClick={menuAtivo} >
                     <div className="one"></div>
                     <div className="two"></div>
                     <div className="three"></div>
@@ -30,7 +26,7 @@ export default function NavBar() {
                     <div>
                         <div className="page">Solicitações</div>
                     </div>
-                    <Form style={{width: '60%'}}>
+                    <Form style={{ width: '60%' }}>
                         <FormControl type="text" placeholder="Pesquisar" className="textSearch" />
                     </Form>
 

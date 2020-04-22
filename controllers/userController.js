@@ -19,8 +19,7 @@ module.exports = {
 			res.send('User not found');
 		}
 	},
-    cadastrarUsuario:  (req, res) => {
-		//console.log(req.body);
+    new:  (req, res) => {
 		let user = req.body;
 		if(user){
 			let result = usuarios.find(
@@ -31,7 +30,7 @@ module.exports = {
 				console.log("usuario já cadastrado!")
 				res.send("usuário já cadastrado!");
 			}else{
-				res.statusCode(201);
+				res.status(201);
 				usuarios.push(user);
 				fs.writeFileSync(path.join('database', 'users.json'),JSON.stringify(usuarios));
 				res.send(user);
@@ -48,6 +47,32 @@ module.exports = {
 			}
 		)
 		return res.render("/", { usuario });
+	},
+	delete: (req, res) => {
+		
+		let id = req.params.id;
+		let index = usuarios.findIndex(e => e.id == req.params.id);
+		console.log('index: '+index);
+		if(index != -1){
+			usuarios.splice(index, 1);
+			fs.writeFileSync(path.join('database', 'users.json'), JSON.stringify(usuarios));
+			console.log('usuario '+id);
+		}else{
+			console.log('usuario nao encontrado');
+		}
+		//Adicionar rota para usuário removido.
+		res.redirect("/");
+	},update: (req, res) => {
+		let id = req.params.id;
+
+		let newUser = req.body;
+
+		let user = usuarios.find(usuario => usuario.id == id);
+		user = newUser;
+		
+		fs.writeFileSync(path.join('database', 'users.json'), JSON.stringify(usuarios))
+
+		res.redirect("/");
 	}
 }
 

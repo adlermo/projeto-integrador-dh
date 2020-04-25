@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import orcaLogo from '../../assets/img/logo-site.png';
 import profile from '../../assets/img/perfil.jpg';
 import { Nav, Navbar, Form, FormControl } from 'react-bootstrap';
+import { IoIosAlbums, IoIosDocument,IoIosArchive } from 'react-icons/io';
 
 import './styles.css';
 
@@ -44,22 +45,22 @@ export default function NavBar() {
                 <ul>
                     <li>
                         <Link to="#">
-                            <span className="icon"><FiArchive /> </span>
-                            <span className="title">Nayara</span>
+                            <span className="icon"><IoIosAlbums /> </span>
+                            <span className="title">Dashboard</span>
                         </Link>
                     </li>
 
                     <li>
                         <Link to="#">
-                            <span className="icon"><FiGithub /></span>
-                            <span className="title">Texto</span>
+                            <span className="icon"><IoIosDocument /></span>
+                            <span className="title">Contratos</span>
                         </Link>
                     </li>
 
                     <li>
                         <Link to="#">
-                            <span className="icon"><FiLayout /></span>
-                            <span className="title">Texto</span>
+                            <span className="icon"><IoIosArchive /></span>
+                            <span className="title">Orçamentos Finalizados</span>
                         </Link>
                     </li>
 

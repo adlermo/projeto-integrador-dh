@@ -5,7 +5,6 @@ import './styles.css';
 
 import homeSite from '../../assets/img/home.svg';
 import testeBg from '../../assets/img/home-fundo.JPG';
-import homeVideo from '../../assets/video/home.mp4';
 
 export default function home() {
 

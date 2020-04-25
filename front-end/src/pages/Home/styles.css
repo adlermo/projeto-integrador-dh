@@ -1,8 +1,10 @@
 /*Home*/
 .home-bg{
     max-width: 100%;
-    background: var(--branco);
+    /* background: var(--branco); */
 }
+
+
 .home {
     /* border-top: 2px solid var(--azul-escuro); */
     border-bottom: 2px solid var(--verde);
@@ -42,3 +44,8 @@
     margin-right: 10%;
 }
 
+.img--home {
+    
+    background-image: url("../../assets/img/home-fundo.JPG");
+}
+ 

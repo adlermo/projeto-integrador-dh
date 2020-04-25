@@ -1,7 +1,7 @@
 /*contato*/
 .contato-bg{
   max-width: 100%;
-  background: var(--branco);
+  /* background: var(--branco); */
 }
 .contato {
   /* border-top: 2px solid var(--azul-escuro); */
@@ -40,4 +40,8 @@
   max-width: 50%;
   min-width: 300px;
   margin-right: 10%;
+}
+
+.img--contato {
+  background-image: url("../../assets/img/contato-fundo.JPG");
 }

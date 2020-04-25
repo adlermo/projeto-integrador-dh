@@ -1,7 +1,7 @@
 /*Sobre*/
 .sobre-bg{
     width: 100%;
-    background: var(--branco);
+    /* background: var(--branco); */
 }
 
 .sobre{
@@ -50,4 +50,8 @@
 
 .azul {
     border-top: 4px solid var(--verde)
+}
+
+.img--sobre {
+    background-image: url("../../assets/img/sobre-fundo.JPG");
 }

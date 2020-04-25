@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
 import NavBar from '../../components/NavBar';
 
+// import api from '../../services/api';
 import './styles.css';
 
 export default function Contato() {
@@ -10,6 +11,11 @@ export default function Contato() {
     return (
          <>
             <NavBar />
+
+            <div className="img-background img--contato">   
+            
+            </div>
+
             <div className="main_container">
                 <section className="contato-bg" id="contato">
                     <div className="contato">
@@ -26,6 +32,8 @@ export default function Contato() {
                             <form>
                                 <input
                                     placeholder="Nome"
+                                     // value="name"
+                                    // onChange={e => setName(e.target.value)}
                                 />
 
                                 <input

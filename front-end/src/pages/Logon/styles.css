@@ -1,26 +1,5 @@
-.logon-container {
-    width: 100%;
-    max-width: 1120px;
-    height: 100vh;
-    margin: 0 auto;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.img--logon {
+    background-image: url("../../assets/img/logon-fundo.JPG");
 }
-
-.logon-container section.form {
-    width: 100%;
-    max-width: 350px;
-    margin-right: 30px;
-}
-
-.logon-container section.form form {
-    margin-top: 100px;
-}
-
-.logon-container section.form form h1 {
-    font-size: 32px;
-    margin-bottom: 32px;
-}
-
+ 

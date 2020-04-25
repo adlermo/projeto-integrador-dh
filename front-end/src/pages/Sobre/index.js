@@ -10,6 +10,11 @@ export default function Sobre() {
     return (
         <>
             <NavBar />  
+
+            <div className="img-background img--sobre">   
+            
+            </div>
+
             <div className="main_container">
                 <section className="sobre-bg" id="sobre">
                     <div className="sobre">

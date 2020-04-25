@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
-import Table from 'react'; 
+import { Link } from 'react-router-dom';
+import { FiArrowLeft } from 'react-icons/fi';
+import NavBar from '../../components/NavBar';
+
 // import { FiLogIn } from 'react-icons/fi';
 
 // import api from "../../services/api";
 import './styles.css';
-
-// import heroesLogo from '../../assets/logo.svg';
-// import heroesImg from '../../assets/heroes.png';
 
 export default function Logon(){
     // const [id, setId] = useState('');
@@ -29,30 +28,48 @@ export default function Logon(){
     // } form - onSubmit={handleLogin}
 
     return (
-        <div className="logon-container">
-            <section className="form">
-                {/* <img src={ heroesLogo } alt="Be The Hero"/> */}
-                
-                <form> 
-                    <h1> Faça seu logon</h1>
-                    
-                    <input 
-                        placeholder="Seu e-mail" 
-                        // value={id}
-                        // onChange={ e => setId(e.target.value)}
-                    />
-                    <button className="button" type="submit">Entrar</button>
+        <>
 
-                    {/*a href - link to  */}
-                    <Link className="back-link" to="/register">
-                        {/* <FiLogIn size={16} color="#e02041"/> */}
-                        Não tenho cadastro
-                    </Link>
-                </form>
+            <div className="img-background img--logon">                
+                {/* <img src={imgRegister} alt="" /> */}
+            </div>
 
-            </section>
+            <NavBar />
 
-            {/* <img src={ heroesImg } alt="Heroes"/> */}
-        </div>        
+            <div className="main_container">
+                <section className="contato-bg" id="contato">
+                    <div className="contato">
+                        <div className="contato-info">
+                            <h1>Login</h1>
+                            <p>Entre com seu e-mail e senha e seja feliz!</p>
+                            <Link className="back-link" to="/register">
+                                <FiArrowLeft size={16} color="#07beb8" />
+                                Não tenho Login!?
+                            </Link>
+                        </div>
+
+                        <div className="contato-form">
+                            <form>
+                                
+
+                                <input
+                                    type="email"
+                                    placeholder="Digite seu melhor e-mail"
+                                />
+                                
+                                <input
+                                    type="password"
+                                    placeholder="Digite sua senha"
+                                />                             
+
+                                <button className="button" type="submit">Enviar</button>
+
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+        </>   
     );
 }

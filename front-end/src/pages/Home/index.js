@@ -5,6 +5,7 @@ import './styles.css';
 
 import homeSite from '../../assets/img/home.svg';
 import testeBg from '../../assets/img/home-fundo.JPG';
+
 export default function home() {
 
     return (

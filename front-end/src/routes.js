@@ -14,6 +14,8 @@ const Routes = () => {
     );
 =======
 import Home from './pages/Home';
+import Sobre from './pages/Sobre';
+import Contato from './pages/Contato';
 import Logon from './pages/Logon';
 import Register from './pages/Register';
 
@@ -22,7 +24,9 @@ import Register from './pages/Register';
         <BrowserRouter>
             <Switch>
                 <Route  path="/" exact component={Home} />
-                <Route  path="/logon" exact component={Logon} />
+                <Route  path="/sobre" component={Sobre} />
+                <Route  path="/contato" component={Contato} />
+                <Route  path="/logon" component={Logon} />
                 <Route  path="/register" component={Register} />
             </Switch>
         </BrowserRouter>

@@ -1,0 +1,57 @@
+/*Sobre*/
+.sobre-bg{
+    width: 100%;
+    /* background: var(--branco); */
+}
+
+.sobre{
+    border-bottom: 2px solid var(--verde);
+    max-width: 100%;
+    padding: 0 40px 0 40px;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; 
+}
+
+.sobre-info h1{
+    width: 960px;
+    padding: 5px ;
+    font-size: 3em;
+    margin-bottom: 0.5em;
+    color: var(--azul-escuro);
+}
+
+.sobre-info p{
+    font-size: 1.25em;
+    line-height: 1.4;
+    color: var(--azul-escuro);
+    width: 100%;
+}
+
+.sobre-item{
+    flex: 1 1 175px;
+    margin: 10px;
+    min-width: 175px;
+}
+
+.sobre-item h2{
+    font-size: 3em;
+    color: var(--azul-escuro);
+    padding: 30px 10px;
+}
+.sobre-item p{
+    font-size: 1.25em;
+    line-height: 1.4;
+    color: var(--azul-escuro);
+    width: 100%;
+}
+
+.azul {
+    border-top: 4px solid var(--verde)
+}
+
+.img--sobre {
+    background-image: url("../../assets/img/sobre-fundo.JPG");
+}

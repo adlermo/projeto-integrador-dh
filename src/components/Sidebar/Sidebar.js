@@ -1,13 +1,11 @@
 import React, { Component, useState } from 'react';
+import { FiArchive, FiCoffee, FiGithub, FiLayout, FiGrid } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import orcaLogo from '../../assets/img/logo-site.png';
-import profile from '../../assets/img/perfil.jpg';
-import { Form, FormControl } from 'react-bootstrap';
-import { IoIosAlbums, IoIosDocument,IoIosArchive } from 'react-icons/io';
 
 import './styles.css';
 
-export default function NavBar() {
+export default function Sidebar() {
 
     const [expandir, setExpandir] = useState("fechado");
     function menuAtivo() {
@@ -15,58 +13,66 @@ export default function NavBar() {
     }
 
     return (
+
         <div className={`wrapper ${expandir}`}>
             <div className="top_navbar">
-                <div className="hamburger" onClick={menuAtivo} >
+                <div
+                    className="hamburger"
+                    onClick={menuAtivo}
+                >
                     <div className="one"></div>
                     <div className="two"></div>
                     <div className="three"></div>
                 </div>
                 <div className="top_menu">
                     <div>
-                        <div className="page">Solicitações</div>
+                        <img className="logo" src={ orcaLogo } alt="Logo Orca"/>
                     </div>
-                    <Form style={{ width: '60%' }}>
-                        <FormControl type="text" placeholder="Pesquisar" className="textSearch" />
-                    </Form>
 
                     <ul>
                         <li>
-                            <Link to="/profile">
-                                <img className="profile" src={profile} />
+                            <Link to="/logon">
+                                <FiCoffee/> 
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="#">
+                                <FiArchive />
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="#">
+                            <FiGrid />
                             </Link>
                         </li>
                     </ul>
                 </div>
             </div>
-
             <div className="sidebar">
                 <ul>
                     <li>
-                        <Link to="/dashboard">
-                            <span className="icon"><IoIosAlbums /> </span>
-                            <span className="title">Dashboard</span>
+                        <Link to="#">
+                            <span className="icon"><FiArchive /> </span>
+                            <span className="title">Texto</span>
                         </Link>
                     </li>
 
                     <li>
                         <Link to="#">
-                            <span className="icon"><IoIosDocument /></span>
-                            <span className="title">Contratos</span>
+                            <span className="icon"><FiGithub/></span>
+                            <span className="title">Texto</span>
                         </Link>
                     </li>
 
                     <li>
                         <Link to="#">
-                            <span className="icon"><IoIosArchive /></span>
-                            <span className="title">Finalizados</span>
+                            <span className="icon"><FiLayout /></span>
+                            <span className="title">Texto</span>
                         </Link>
-                    </li>
+                    </li>                
 
                 </ul>
-            </div>
-
+            </ div>
         </div>
-
     )
 }

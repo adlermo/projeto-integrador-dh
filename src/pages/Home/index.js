@@ -1,20 +1,38 @@
 import React from 'react';
-import { FiArchive } from 'react-icons/fi';
-import { Link } from 'react-router-dom';
-import Licitacoes from '../Licitacoes/Licitacoes'
-import NavBar from '../../components/NavBar';
+import { Navigationbar } from '../../components/Navigationbar/';
 
 import './styles.css';
 
-// import heroesLogo from '../../assets/logo.svg';
-// import heroesImg from '../../assets/heroes.png';
+import homeSite from '../../assets/img/home.svg';
+import testeBg from '../../assets/img/home-fundo.JPG';
 
-export default function Logon() {
+export default function home() {
 
     return (
         <>
-            <Licitacoes />;
-            <NavBar> </NavBar>
+            <div className="img-background img--home">   
+            
+            </div>
+
+            <Navigationbar />
+
+            <div className="main_container">
+                <section className="home-bg">
+                    <div className="home">
+                        <div className="home-info">
+                            <h1>Home</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi dolores sit quis voluptatibus aut dolorem ea nemo! Doloremque itaque numquam, vel porro unde dolor? Aut aspernatur accusantium dolor eveniet tenetur!</p>
+                            
+                        </div>
+
+                        <div className="home-img">
+                            <img src={homeSite} alt="home-site" />
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+
         </>
     );
 }

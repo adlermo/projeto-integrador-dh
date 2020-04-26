@@ -1,0 +1,36 @@
+.Navbar-Brand{
+  color: white;
+}
+
+.navbar {
+     color:white;
+}
+
+a, .navbar-nav, .navbar-light .nav-link {
+  color: #9FFFCB;
+/*  &:hover { color: white; } */
+}
+
+.navbar-brand {
+  font-size: 1.4em;
+  color: white !important ;
+/*  &:hover { color: white; } */
+}
+
+.form-center {
+  position: absolute !important;
+  left: 25%;
+  right: 25%;
+}
+
+.textSearch{
+    color: white;
+}
+
+.perfil {
+    float: right;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    border: 2px solid #dbdbdb;
+}

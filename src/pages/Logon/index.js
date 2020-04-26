@@ -1,55 +1,75 @@
-import React from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import NavBar from '../../components/NavBar/index.js';
-import Card from 'react-bootstrap/Card'
-import './style.css'
-import image from '../../assets/img/perfil.jpg';
-import { Nav, Navbar, Form, FormControl } from 'react-bootstrap';
-import { IoMdWarning } from "react-icons/io";
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FiArrowLeft } from 'react-icons/fi';
+import NavBar from '../../components/NavBar';
 
+// import { FiLogIn } from 'react-icons/fi';
 
+// import api from "../../services/api";
+import './styles.css';
 
-export default function profile() {
-  return (
-    <div>
-      <React.Fragment>
-        <Router>
-        <NavBar />
+export default function Logon(){
+    // const [id, setId] = useState('');
+    // const history = useHistory();
 
-        <Card className="cardWarning">
-    <Card-Titular>
-        <Card.Title>Avisos</Card.Title>
-    </Card-Titular>
-    <Card-Mother className="card">
-    <Card.Body>
-        <Card.Text><IoMdWarning />Verificar contrato Licitação Y</Card.Text>
-        <Card.Text><IoMdWarning />Informações solicitadas</Card.Text>
-        <Card.Text><IoMdWarning />Itens a serem entregues</Card.Text>
-    </Card.Body>
-    </Card-Mother>
-    </ Card>
+    // async function handleLogin(e) {
+    //     e.preventDefault();
 
-        <Card className="cardProfile"> <Link to="/editprofile">
-    <Card-Titular>
-        <Card.Title>Responsável</Card.Title>
-    </Card-Titular>
-    <Card-Mother className="card">
-    <Card.Body>
-        <Card.Img className="profileImage" src={image} alt="Profile Image" />
-        <Card.Text>Ligia Albuquerque</Card.Text>
-        <Card.Text>Coordenadora</Card.Text>
-        <Card.Text>Varejista</Card.Text>
-    </Card.Body>
-    </Card-Mother>
-    </Link>
-    </ Card>
+    //     try{
+    //         const response = await api.post('sessions', { id });
+            
+    //         localStorage.setItem('ongId', id);
+    //         localStorage.setItem('ongName', response.data.name);
 
+    //         history.push('/profile');
+    //     } catch (err){
+    //         alert('Falha no Login, tente novamente');
+    //     }
+    // } form - onSubmit={handleLogin}
 
+    return (
+        <>
 
-        </Router>
-      </React.Fragment>
-    </div>
-  )
+            <div className="img-background img--logon">                
+                {/* <img src={imgRegister} alt="" /> */}
+            </div>
+
+            <NavBar />
+
+            <div className="main_container">
+                <section className="contato-bg" id="contato">
+                    <div className="contato">
+                        <div className="contato-info">
+                            <h1>Login</h1>
+                            <p>Entre com seu e-mail e senha e seja feliz!</p>
+                            <Link className="back-link" to="/register">
+                                <FiArrowLeft size={16} color="#07beb8" />
+                                Não tenho Login!?
+                            </Link>
+                        </div>
+
+                        <div className="contato-form">
+                            <form>
+                                
+
+                                <input
+                                    type="email"
+                                    placeholder="Digite seu melhor e-mail"
+                                />
+                                
+                                <input
+                                    type="password"
+                                    placeholder="Digite sua senha"
+                                />                             
+
+                                <button className="button" type="submit">Enviar</button>
+
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+        </>   
+    );
 }

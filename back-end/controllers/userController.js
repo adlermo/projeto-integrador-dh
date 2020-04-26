@@ -1,19 +1,26 @@
 const usuarios = require("../database/users.json")
 const fs = require("fs");
 const path = require('path');
-
+const Sequelize = require('sequelize');
+const config = require('../config/database');
 
 module.exports = {
-	index: (req, res)=>{
-		//res.render("clientes",{clientes: usuarios});
-		res.send(usuarios);
+	index: async (req, res)=>{
+		const db = new Sequelize(config);
+		const usuarios = await db.query('select * from user',{type:Sequelize.QueryTypes.SELECT});
+		if( usuarios.count > 0 ){
+			res.send(usuarios);
+		}else{
+			res.send("nao há users cadastrados");
+		}
+		
 	},
-	search: (req, res) => {
+	search: async (req, res) => {
 		let busca = req.params.id
-		let result = usuarios.find(
-			user => user.id == busca
-		);
-		if (result) {
+		
+		const db = new Sequelize(config);
+		const result = await db.query('select * from user where id ='+busca,{type:Sequelize.QueryTypes.SELECT});
+		if (result > 0) {
 			res.send(result)
 		} else {
 			res.send('User not found');
@@ -48,19 +55,20 @@ module.exports = {
 		)
 		return res.render("/", { usuario });
 	},
-	delete: (req, res) => {
+	delete: async (req, res) => {
 		
 		let id = req.params.id;
-		let index = usuarios.findIndex(e => e.id == req.params.id);
-		console.log('index: '+index);
-		if(index != -1){
-			usuarios.splice(index, 1);
-			fs.writeFileSync(path.join('database', 'users.json'), JSON.stringify(usuarios));
-			console.log('usuario '+id);
+	
+		const db = new Sequelize(config);
+		const result = await db.query('select * from user where id = '+id,{type:Sequelize.QueryTypes.SELECT});
+		
+		if( result != null ) {
+			const result = await db.query('delete from user where id = '+id,{type:Sequelize.QueryTypes.DELETE});
+			console.log("usuario excluido");
 		}else{
 			console.log('usuario nao encontrado');
 		}
-		//Adicionar rota para usuário removido.
+
 		res.redirect("/");
 	},update: (req, res) => {
 		let id = req.params.id;

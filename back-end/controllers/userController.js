@@ -58,27 +58,15 @@ module.exports = {
 		
 		let id = req.params.id;
 	
-		User.destroy({
+		const deletedUser = User.destroy({
 			where: {
 				id: id
 			}
 		})
-
-		let user = await User.findByPk(id);
-		
-		if(user !==  null){
-			console.log(user);
-		}else{
-		 	console.log("user deletado");
-		}
 		res.redirect("/");
-	}//,update: (req, res) => {
-	// 	let id = req.params.id;
-
-	// 	const user = await User.create({ name: "Jane" });
-	// 	jane.name = "Ada";
-	// 	await jane.save();
-	// 	res.redirect("/");
-	// }
+	},companies: (req, res) => {
+		let id = req.params.id;
+		
+	}
 }
 

@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 
 import './styles.css'
 
-import Register from '../../pages/Register'
-import Orcamentos from '../../pages/Orcamentos';
-import Overview from '../../pages/Overview';
-import Donut from '../../pages/Donut';
+import Register from '../Register'
+import Orcamentos from '../Orcamentos';
+import Overview from '../Overview';
+import Donut from '../Donut';
 
 export default class Body extends Component {
     constructor(props) {

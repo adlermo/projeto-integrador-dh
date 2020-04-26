@@ -1,38 +1,48 @@
 const usuarios = require("../database/users.json")
 const fs = require("fs");
 const path = require('path');
-
+const Sequelize = require('sequelize');
+const config = require('../config/database');
 
 module.exports = {
-	index: (req, res)=>{
-		//res.render("clientes",{clientes: usuarios});
-		res.send(usuarios);
-	},
-	search: (req, res) => {
-		let busca = req.params.id
-		let result = usuarios.find(
-			user => user.id == busca
-		);
-		if (result) {
-			res.send(result)
-		} else {
-			res.send('User not found');
+	index: async (req, res)=>{
+		const db = new Sequelize(config);
+		console.log(db);
+		const usuarios = await db.query('select * from user',{type:Sequelize.QueryTypes.SELECT});
+		if(usuarios){
+			res.send(usuarios);
+		}else{
+			//sres.send("nao há users cadastrados");
 		}
 	},
-    new:  (req, res) => {
+	search: async (req, res) => {
+		let busca = req.params.id
+		
+		const db = new Sequelize(config);
+		const result = await db.query('select * from user where id ='+busca,{type:Sequelize.QueryTypes.SELECT});
+		//if (result ) {
+			res.send(result)
+		//} else {
+			//res.send('User not found');
+		//}
+	},
+    new:  async (req, res) => {
 		let user = req.body;
+		let cpf = user.cpf;
 		if(user){
-			let result = usuarios.find(
-				u => u.id == req.body.id
-			);
+			let db = new Sequelize(config);
+			const result = await db.query('select * from user where user.cpf = :cpf',{
+				replacements:{
+					cpf
+			},type:Sequelize.QueryTypes.SELECT});
 			console.log(result);
-			if(result){
+			if(result !== undefined && result.length > 0){
 				console.log("usuario já cadastrado!")
 				res.send("usuário já cadastrado!");
 			}else{
 				res.status(201);
-				usuarios.push(user);
-				fs.writeFileSync(path.join('database', 'users.json'),JSON.stringify(usuarios));
+				const insert = await db.query('INSERT INTO user(nome,idade,cpf,rg,data_nasc,cnpj,fornecedor,email,senha,cep,endereco,numero,bairro,cidade,estado,telefone,celular) VALUES (\"'+user.nome+'\",'+user.idade+',\"'+user.cpf+'\",\"'+user.rg+'\",'+user.data_nasc+',\"'+user.cnpj+'\",'+user.fornecedor+',\"'+user.email+'\",\"'+user.senha+'\",\"'+user.cep+'\",\"'+user.endereco+'\",'+user.numero+',\"'+user.bairro+'\",\"'+user.cidade+'\",\"'+user.estado+'\",\"'+user.telefone+'\",\"'+user.celular+'\");',{type:Sequelize.QueryTypes.INSERT});
+				//console.log(insert);
 				res.send(user);
 			}
 		}else{
@@ -48,19 +58,20 @@ module.exports = {
 		)
 		return res.render("/", { usuario });
 	},
-	delete: (req, res) => {
+	delete: async (req, res) => {
 		
 		let id = req.params.id;
-		let index = usuarios.findIndex(e => e.id == req.params.id);
-		console.log('index: '+index);
-		if(index != -1){
-			usuarios.splice(index, 1);
-			fs.writeFileSync(path.join('database', 'users.json'), JSON.stringify(usuarios));
-			console.log('usuario '+id);
+	
+		const db = new Sequelize(config);
+		const result = await db.query('select * from user where id = '+id,{type:Sequelize.QueryTypes.SELECT});
+		
+		if( result != null ) {
+			const result = await db.query('delete from user where id = '+id,{type:Sequelize.QueryTypes.DELETE});
+			console.log("usuario excluido");
 		}else{
 			console.log('usuario nao encontrado');
 		}
-		//Adicionar rota para usuário removido.
+
 		res.redirect("/");
 	},update: (req, res) => {
 		let id = req.params.id;

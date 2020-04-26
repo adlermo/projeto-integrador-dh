@@ -9,6 +9,20 @@ module.exports = {
 			res.send("Nao há usuários cadastrados");
 		}
 	},
+	logon: async(req, res) => {
+		const { email, senha } = req.body;
+
+		console.log(email);
+		console.log(req.body);
+		
+		
+		let user = await User.findOne(email);
+		if(user !==  null){
+			res.send(user);
+		}else{
+			res.send("user nao encontrado");
+		}
+	},
 	search: async (req, res) => {
 		let id = req.params.id
 		

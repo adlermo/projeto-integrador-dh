@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link , useHistory} from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
 import NavBar from '../../components/NavBar';
 
-// import { FiLogIn } from 'react-icons/fi';
-
-// import api from "../../services/api";
+import api from "../../services/api";
 import './styles.css';
 
 export default function Logon(){
-    // const [id, setId] = useState('');
+    // const [email, setEmail] = useState('');
+    // const [senha, setSenha] = useState('');
+    
     // const history = useHistory();
 
     // async function handleLogin(e) {

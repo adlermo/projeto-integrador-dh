@@ -1,30 +1,6 @@
-*{
-    background-color: #40476d
-}
 
-.layout {
-    display: grid;
-    grid-template-areas: 
-      "h h h"
-      "s m m"
-      "f f f";
-}
-
-.h {
-    grid-area: h;
-    background-color: brown;
-}
-.f {
-    grid-area: f;
-    background-color: yellow;
-}
-.m {
-    grid-area: m;
-    background-color: red;
-}
-.s {
-    grid-area: s;
-    background-color: blue;
+.dashboard-bg{    
+    background: var(--azul-escuro);
 }
 
 .row{
@@ -141,3 +117,4 @@ Card-Header{
 Card-Mother{
     color:blue;
 }
+

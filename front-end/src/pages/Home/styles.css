@@ -44,8 +44,8 @@
     margin-right: 10%;
 }
 
-.img--home {
-    
-    background-image: url("../../assets/img/home-fundo.JPG");
+.img--home {    
+    background: var(--azul-escuro);
+    /* background-image: url("../../assets/img/home-fundo.JPG"); */
 }
  

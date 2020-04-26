@@ -134,3 +134,14 @@ form textarea {
     z-index: -2;
     opacity: 0.3;
 }
+
+.color-background{
+    position: absolute;    
+    top: 0;
+    left: 0;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -2;
+}

@@ -1,89 +1,72 @@
-const usuarios = require("../database/users.json")
-const fs = require("fs");
-const path = require('path');
-const Sequelize = require('sequelize');
-const config = require('../config/database');
+const { User } = require("../models");
 
 module.exports = {
 	index: async (req, res)=>{
-		const db = new Sequelize(config);
-		console.log(db);
-		const usuarios = await db.query('select * from user',{type:Sequelize.QueryTypes.SELECT});
-		if(usuarios){
-			res.send(usuarios);
+		let users = await User.findAll();
+		if(users !==  null){
+			res.send(users);
 		}else{
-			//sres.send("nao há users cadastrados");
+			res.send("Nao há usuários cadastrados");
 		}
 	},
 	search: async (req, res) => {
-		let busca = req.params.id
+		let id = req.params.id
 		
-		const db = new Sequelize(config);
-		const result = await db.query('select * from user where id ='+busca,{type:Sequelize.QueryTypes.SELECT});
-		//if (result ) {
-			res.send(result)
-		//} else {
-			//res.send('User not found');
-		//}
-	},
-    new:  async (req, res) => {
-		let user = req.body;
-		let cpf = user.cpf;
-		if(user){
-			let db = new Sequelize(config);
-			const result = await db.query('select * from user where user.cpf = :cpf',{
-				replacements:{
-					cpf
-			},type:Sequelize.QueryTypes.SELECT});
-			console.log(result);
-			if(result !== undefined && result.length > 0){
-				console.log("usuario já cadastrado!")
-				res.send("usuário já cadastrado!");
-			}else{
-				res.status(201);
-				const insert = await db.query('INSERT INTO user(nome,idade,cpf,rg,data_nasc,cnpj,fornecedor,email,senha,cep,endereco,numero,bairro,cidade,estado,telefone,celular) VALUES (\"'+user.nome+'\",'+user.idade+',\"'+user.cpf+'\",\"'+user.rg+'\",'+user.data_nasc+',\"'+user.cnpj+'\",'+user.fornecedor+',\"'+user.email+'\",\"'+user.senha+'\",\"'+user.cep+'\",\"'+user.endereco+'\",'+user.numero+',\"'+user.bairro+'\",\"'+user.cidade+'\",\"'+user.estado+'\",\"'+user.telefone+'\",\"'+user.celular+'\");',{type:Sequelize.QueryTypes.INSERT});
-				//console.log(insert);
-				res.send(user);
-			}
+		let user = await User.findByPk(id);
+		if(user !==  null){
+			res.send(user);
 		}else{
-			console.log("Não foi possível cadastrar o usuário")
-			res.send("Não foi possível cadastrar o usuário");
+			res.send("user nao encontrado");
 		}
 	},
-	edit: (req, res) => {
-		let usuario = usuarios.find(
-			(usuario) => {
-				return usuario.id == req.params.id;
+    new:  async (req, res) => {
+		let u = req.body;
+		let cpf = u.cpf;
+		let result = await User.findOne({
+			where: {
+				cpf: cpf
 			}
-		)
-		return res.render("/", { usuario });
+		})
+		if( result == null ){
+			let user = await User.create({
+				nome: u.nome,
+				idade: u.idade,
+				cpf:u.cpf,
+				rg:u.rg,
+				data_nasc:u.data_nasc,
+				cnpj:u.cnpj,
+				fornecedor:u.fornecedor,
+				email: u.email,
+				senha: u.senha,
+				cep:u.cep,
+				endereco:u.endereco,
+				numero:u.numero,
+				bairro:u.bairro,
+				cidade:u.cidade,
+				estado:u.estado,
+				telefone:u.telefone,
+				celular:u.celular
+			});
+			await user.save();
+			res.send(user);
+		}else{
+			res.status(409);
+			res.send("usuario já cadastrado");
+		}
 	},
 	delete: async (req, res) => {
 		
 		let id = req.params.id;
 	
-		const db = new Sequelize(config);
-		const result = await db.query('select * from user where id = '+id,{type:Sequelize.QueryTypes.SELECT});
-		
-		if( result != null ) {
-			const result = await db.query('delete from user where id = '+id,{type:Sequelize.QueryTypes.DELETE});
-			console.log("usuario excluido");
-		}else{
-			console.log('usuario nao encontrado');
-		}
-
+		const deletedUser = User.destroy({
+			where: {
+				id: id
+			}
+		})
 		res.redirect("/");
-	},update: (req, res) => {
+	},companies: (req, res) => {
 		let id = req.params.id;
-
-		let newUser = req.body;
-
-		let user = usuarios.find(usuario => usuario.id == id);
-		user = newUser;
 		
-		fs.writeFileSync(path.join('database', 'users.json'), JSON.stringify(usuarios))
-
-		res.redirect("/");
 	}
 }
 

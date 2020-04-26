@@ -1,8 +1,8 @@
 import React, { Component, useState } from 'react';
-import { IoIosHome, IoIosInformationCircle, IoMdCart, IoMdText, IoIosLogIn } from 'react-icons/io';
+import { IoIosAlbums, IoIosDocument, IoIosArchive } from 'react-icons/io';
 import { Link } from 'react-router-dom';
 import orcaLogo from '../../assets/img/logo-site.png';
-// import profile from '../../assets/img/perfil.jpg';
+import profile from '../../assets/perfil.jpg';
 import { Nav, Navbar, Form, FormControl } from 'react-bootstrap';
 
 import './styles.css';
@@ -29,13 +29,13 @@ export default function NavBar() {
                     <div className="logo">
                         <img src={orcaLogo} alt="home-site" />
                     </div>
+
                     <ul>
-                        <li> <Link to="/" className="ativo"> Home </Link> </li>
-
-                        <li> <Link to="/sobre"> Sobre </Link> </li>
-
-                        <li> <Link to="/contato"> Contato </Link> </li>
-
+                        <li>
+                            <Link to="/profile">
+                                <img className="profile" src={profile} />
+                            </Link>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -43,23 +43,23 @@ export default function NavBar() {
             <div className="sidebar">
                 <ul>
                     <li>
-                        <Link to="/">
-                            <span className="icon"><IoIosHome /> </span>
-                            <span className="title">Home</span>
+                        <Link to="/dashboard">
+                            <span className="icon"><IoIosAlbums /> </span>
+                            <span className="title">Dashboard</span>
                         </Link>
                     </li>
 
                     <li>
-                        <Link to="/orcamentos">
-                            <span className="icon"><IoMdCart /></span>
-                            <span className="title">Orçamentos</span>
+                        <Link to="#">
+                            <span className="icon"><IoIosDocument /></span>
+                            <span className="title">Contratos</span>
                         </Link>
                     </li>
 
                     <li>
-                        <Link to="/logon">
-                            <span className="icon"><IoIosLogIn /></span>
-                            <span className="title">Entrar</span>
+                        <Link to="#">
+                            <span className="icon"><IoIosArchive /></span>
+                            <span className="title">Finalizados</span>
                         </Link>
                     </li>
                 </ul>

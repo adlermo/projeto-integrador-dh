@@ -5,7 +5,7 @@ import NavBarDark from '../../components/NavBarDark/index.js';
 
 import './styles.css'
 
-import Licitacoes from '../Licitacoes'
+import Licitacoes from '../../components/Licitacoes'
 
 export default function Dashboard() {
     return (
@@ -15,7 +15,7 @@ export default function Dashboard() {
             <NavBarDark />
 
             <div className="main_container">
-               <h1> teste </h1>
+               <Licitacoes />
             </div>
 
         </>

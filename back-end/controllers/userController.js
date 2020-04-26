@@ -20,25 +20,29 @@ module.exports = {
 		
 		const db = new Sequelize(config);
 		const result = await db.query('select * from user where id ='+busca,{type:Sequelize.QueryTypes.SELECT});
-		if (result > 0) {
+		//if (result ) {
 			res.send(result)
-		} else {
-			res.send('User not found');
-		}
+		//} else {
+			//res.send('User not found');
+		//}
 	},
     new:  async (req, res) => {
 		let user = req.body;
-		console.log(user);
+		let cpf = user.cpf;
 		if(user){
 			let db = new Sequelize(config);
-			const result = await db.query('select * from user where cpf = \"'+user.cpf+"\"",{type:Sequelize.QueryTypes.SELECT});
-			if(result.count > 0){
+			const result = await db.query('select * from user where user.cpf = :cpf',{
+				replacements:{
+					cpf
+			},type:Sequelize.QueryTypes.SELECT});
+			console.log(result);
+			if(result !== undefined && result.length > 0){
 				console.log("usuario já cadastrado!")
 				res.send("usuário já cadastrado!");
 			}else{
 				res.status(201);
 				const insert = await db.query('INSERT INTO user(nome,idade,cpf,rg,data_nasc,cnpj,fornecedor,email,senha,cep,endereco,numero,bairro,cidade,estado,telefone,celular) VALUES (\"'+user.nome+'\",'+user.idade+',\"'+user.cpf+'\",\"'+user.rg+'\",'+user.data_nasc+',\"'+user.cnpj+'\",'+user.fornecedor+',\"'+user.email+'\",\"'+user.senha+'\",\"'+user.cep+'\",\"'+user.endereco+'\",'+user.numero+',\"'+user.bairro+'\",\"'+user.cidade+'\",\"'+user.estado+'\",\"'+user.telefone+'\",\"'+user.celular+'\");',{type:Sequelize.QueryTypes.INSERT});
-				console.log(insert);
+				//console.log(insert);
 				res.send(user);
 			}
 		}else{

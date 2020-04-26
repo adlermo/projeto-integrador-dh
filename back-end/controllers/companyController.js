@@ -1,12 +1,14 @@
-const empresas = require("../database/company.json")
-const fs = require("fs");
+const { Company } = require("../models");
 const fetch = require("node-fetch");
-const path = require('path');
-
 
 module.exports = {
-	index: (req, res)=>{
-		res.send(empresas);
+	index: async (req, res)=>{
+		let companies = await Company.findAll();
+		if(companies !==  null){
+			res.send(companies);
+		}else{
+			res.send("Nao há empresas cadastradas");
+		}
 	},search: (req, res) => {
         let busca = req.params.cnpj;
         let url = 'https://www.receitaws.com.br/v1/cnpj/';

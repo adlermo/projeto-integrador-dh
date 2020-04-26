@@ -8,7 +8,7 @@ import Logon from './pages/Logon';
 import Register from './pages/Register';
 
 import Dashboard from './pages/Dashboard';
-import Licitacoes from './pages/Licitacoes';
+//import Licitacoes from './pages/Licitacoes';
 // import Perfil from './pages/Perfil';
 
  const Routes = () => {
@@ -22,7 +22,7 @@ import Licitacoes from './pages/Licitacoes';
                 <Route  path="/register" component={Register} />
 
                 <Route  path="/dashboard" exact component={Dashboard} />
-                <Route  path="/dashboard/licitacoes" component={Licitacoes} />
+                {/*<Route  path="/dashboard/licitacoes" component={Licitacoes} />*/}
                 {/* <Route  path="/dashboard/perfil" component={Perfil} /> */}
 
             </Switch>

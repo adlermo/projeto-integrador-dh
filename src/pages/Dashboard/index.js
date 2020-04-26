@@ -10,12 +10,14 @@ import Licitacoes from '../Licitacoes/Licitacoes'
 export default function Dashboard() {
   return (
     <div>
-      <React.Fragment>
+      <>
         <Router>
         <NavBar />
+        <div className="main_container">
+        <Licitacoes />;
+        </div>
         </Router>
-      </React.Fragment>
-     <Licitacoes />;
+      </>
     </div>
   )
 }

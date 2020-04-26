@@ -60,7 +60,7 @@ export default function NavBar() {
                     <li>
                         <Link to="#">
                             <span className="icon"><IoIosArchive /></span>
-                            <span className="title">Orçamentos Finalizados</span>
+                            <span className="title">Finalizados</span>
                         </Link>
                     </li>
 

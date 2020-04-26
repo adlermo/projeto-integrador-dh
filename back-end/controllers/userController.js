@@ -7,13 +7,13 @@ const config = require('../config/database');
 module.exports = {
 	index: async (req, res)=>{
 		const db = new Sequelize(config);
+		console.log(db);
 		const usuarios = await db.query('select * from user',{type:Sequelize.QueryTypes.SELECT});
-		if( usuarios.count > 0 ){
+		if(usuarios){
 			res.send(usuarios);
 		}else{
-			res.send("nao há users cadastrados");
+			//sres.send("nao há users cadastrados");
 		}
-		
 	},
 	search: async (req, res) => {
 		let busca = req.params.id
@@ -26,20 +26,19 @@ module.exports = {
 			res.send('User not found');
 		}
 	},
-    new:  (req, res) => {
+    new:  async (req, res) => {
 		let user = req.body;
+		console.log(user);
 		if(user){
-			let result = usuarios.find(
-				u => u.id == req.body.id
-			);
-			console.log(result);
-			if(result){
+			let db = new Sequelize(config);
+			const result = await db.query('select * from user where cpf = \"'+user.cpf+"\"",{type:Sequelize.QueryTypes.SELECT});
+			if(result.count > 0){
 				console.log("usuario já cadastrado!")
 				res.send("usuário já cadastrado!");
 			}else{
 				res.status(201);
-				usuarios.push(user);
-				fs.writeFileSync(path.join('database', 'users.json'),JSON.stringify(usuarios));
+				const insert = await db.query('INSERT INTO user(nome,idade,cpf,rg,data_nasc,cnpj,fornecedor,email,senha,cep,endereco,numero,bairro,cidade,estado,telefone,celular) VALUES (\"'+user.nome+'\",'+user.idade+',\"'+user.cpf+'\",\"'+user.rg+'\",'+user.data_nasc+',\"'+user.cnpj+'\",'+user.fornecedor+',\"'+user.email+'\",\"'+user.senha+'\",\"'+user.cep+'\",\"'+user.endereco+'\",'+user.numero+',\"'+user.bairro+'\",\"'+user.cidade+'\",\"'+user.estado+'\",\"'+user.telefone+'\",\"'+user.celular+'\");',{type:Sequelize.QueryTypes.INSERT});
+				console.log(insert);
 				res.send(user);
 			}
 		}else{

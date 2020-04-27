@@ -1,5 +1,11 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Front-end | ORCA Inc.
+
+Em desenvolvimento e estilização. Aguardando conclusão para ser integrada à API criada também de iniciativa própria do Team ORCA.
+
+###### É necessaria "autenticação" para acessar a Dashboard e seu componentes <br/> [Issues](https://github.com/adlermo/projeto-integrador-dh/edit/master/README.md#issue)
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -66,3 +72,9 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+#### Issue
+
+Tente reinstalar a dependência específica e/ou suas sub-dependencias
+

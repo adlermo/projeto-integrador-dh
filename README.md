@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Em desenvolvimento e estilização. Aguardando conclusão para ser integrada à API criada também de iniciativa própria do Team ORCA.
 
-###### É necessaria "autenticação" para acessar a Dashboard e seu componentes <br/> [Issues](https://github.com/adlermo/projeto-integrador-dh/edit/master/README.md#issue)
+###### É necessaria "autenticação" para acessar a Dashboard e seu componentes <br/> [Issues](https://github.com/adlermo/projeto-integrador-dh#issue)
 
 ## Available Scripts
 

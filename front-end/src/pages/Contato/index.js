@@ -10,7 +10,7 @@ export default function Contato() {
 
     return (
          <>
-            <NavBar />
+            <NavBar pagina={"contato"}/>
 
             <div className="img-background img--contato">   
             

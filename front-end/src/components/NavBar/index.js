@@ -7,7 +7,9 @@ import { Nav, Navbar, Form, FormControl } from 'react-bootstrap';
 
 import './styles.css';
 
-export default function NavBar() {
+export default function NavBar(props) {
+    
+    const ativarMenu = menu => (props.pagina == menu) ? "ativo" : "";
 
     const [expandir, setExpandir] = useState("fechado");
     function menuAtivo() {
@@ -27,14 +29,26 @@ export default function NavBar() {
                 </div>
                 <div className="top_menu">
                     <div className="logo">
-                        <img src={orcaLogo} alt="home-site" />
+                        <img src={orcaLogo} alt="home-site" />                        
                     </div>
                     <ul>
-                        <li> <Link to="/" className="ativo"> Home </Link> </li>
+                        <li>
+                            <Link to="/"
+                                className={ativarMenu("home")}> Home
+                            </Link>
+                        </li>
 
-                        <li> <Link to="/sobre"> Sobre </Link> </li>
+                        <li> 
+                            <Link to="/sobre" 
+                                className={ativarMenu("sobre")}> Sobre
+                            </Link> 
+                        </li>
 
-                        <li> <Link to="/contato"> Contato </Link> </li>
+                        <li> 
+                            <Link to="/contato" 
+                                className={ativarMenu("contato")}> Contato 
+                            </Link> 
+                        </li>
 
                     </ul>
                 </div>

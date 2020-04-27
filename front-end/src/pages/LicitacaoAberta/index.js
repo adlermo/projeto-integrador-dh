@@ -4,7 +4,6 @@ import { IoIosPeople, IoIosArrowDown, IoIosStar, IoIosStarOutline, } from "react
 import { FaBoxOpen } from "react-icons/fa";
 import NavBarDark from '../../components/NavBarDark/index.js';
 import './style.css'
-import { Link } from 'react-router-dom';
 //import box from "../../assets/img/imgbox.png";
 
 export default class LicitacaoAberta extends Component {
@@ -51,7 +50,7 @@ export default class LicitacaoAberta extends Component {
     }
 
     companyRender = () => {
-        return this.state.companies.forEach(company => <div className='card-licitacoes-abertas'>
+        return this.state.companies.forEach(company => <div className='card-item'>
             <div className="orca-company">
                 <IoIosPeople />
             </div>
@@ -69,12 +68,15 @@ export default class LicitacaoAberta extends Component {
 
     render() {
         return <>
+            <div className="color-background dashboard-bg" />
+
+            <NavBarDark />
+
             <div className="main_container">
-                <section className='card-container-dash'>
+                <section className='card-container'>
                     {/* TO DO: loop printing each card item */}
 
-                    <div className='card-licitacoes-abertas'>
-                        <Link to="/dashboard/licitacaoaberta">
+                    <div className='card-licitacao'>
                         <div className="orca-company">
                             <FaBoxOpen />
                             <p>Licitação A</p>
@@ -88,18 +90,17 @@ export default class LicitacaoAberta extends Component {
                             <IoIosArrowDown />
 
                         </div>
-                        </Link>
                     </div>
 
-                    <div className='card-licitacoes-abertas'>
-                        
+                    <div className='card-item'>
                         <div className="orca-company">
                             <FaBoxOpen />
-                            <p>Licitação B</p>
+                            <p>Fornecedor X</p>
                         </div>
                         <div className="company-data">
-                            <p>7 Computadores</p>
-                            <p>3 Impressões</p>
+                            <p>Item 1 - R$ 2.000,00</p>
+                            <p>Item 1 - R$ 2.000,00</p>
+                            <p>Item 1 - R$ 2.000,00</p>
                         </div>
                         <div className="company-options">
                             <IoIosArrowDown />
@@ -107,14 +108,31 @@ export default class LicitacaoAberta extends Component {
                         </div>
                     </div>
 
-                    <div className='card-licitacoes-abertas'>
+                    <div className='card-item'>
                         <div className="orca-company">
                             <FaBoxOpen />
-                            <p>Licitação C</p>
+                            <p>Nome Empresa</p>
                         </div>
                         <div className="company-data">
-                            <p>1 Reforma de Interiores</p>
-                            <p>Pintura da Fachada</p>
+                            <p>Item 1 - R$ 2.000,00</p>
+                            <p>Item 1 - R$ 2.000,00</p>
+                            <p>Item 1 - R$ 2.000,00</p>
+                        </div>
+                        <div className="company-options">
+                            <IoIosArrowDown />
+
+                        </div>
+                    </div>
+
+                    <div className='card-item'>
+                        <div className="orca-company">
+                            <FaBoxOpen />
+                            <p>Nome Empresa</p>
+                        </div>
+                        <div className="company-data">
+                            <p>Item 1 - R$ 2.000,00</p>
+                            <p>Item 1 - R$ 2.000,00</p>
+                            <p>Item 1 - R$ 2.000,00</p>
                         </div>
                         <div className="company-options">
                             <IoIosArrowDown />

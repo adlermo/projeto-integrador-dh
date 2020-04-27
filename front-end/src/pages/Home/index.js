@@ -4,17 +4,14 @@ import NavBar from '../../components/NavBar';
 import './styles.css';
 
 import homeSite from '../../assets/img/home.svg';
-import testeBg from '../../assets/img/home-fundo.JPG';
 
 export default function home() {
 
     return (
         <>
-            <div className="img-background img--home">   
+            <div className="img-background img--home" />   
             
-            </div>
-
-            <NavBar />
+            <NavBar pagina={"home"} />
 
             <div className="main_container">
                 <section className="home-bg">

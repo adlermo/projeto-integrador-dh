@@ -1,0 +1,32 @@
+
+.cardProfile .card{
+    inline-size: auto;
+    background-color: white !important;
+    position: absolute !important;
+    justify-content: space-evenly !important;
+    background-color: white !important;
+    margin-top: 100px;
+    width: 500px !important;
+}
+
+.card-titular{
+    background-color: white !important;
+}
+
+card-titular{
+    background-color: white !important;
+}
+
+.card-body{
+    background-color: white !important;
+}
+
+.card-text{
+    color: #40476d;
+    background-color: white;
+}
+
+.card-title{
+    color: #40476d;
+    background-color: white;
+}

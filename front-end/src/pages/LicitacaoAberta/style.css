@@ -1,48 +1,20 @@
-
-.dashboard-bg{    
-    background: var(--azul-escuro);
-}
-
-.row{
-    margin-left: 0px;
-    background-color:blue;
-}
-
-.col-3{
-    float: left;
-    color:yellow;
-}
-
-.nav-flex-column-nav-pills{
-    margin-left: 20px;
-    background-color: white;
-}
-
-.tab{
-    background-color: red;
-}
-
-.pills{
-    background-color: yellow;
-}
-
-
 /* Bootstrap Margin reset ------------------- */
 p {
     margin: 0;
 }
 /* ------------------------------------------ */
 
-.card-container-dash {
+.card-container {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     width: 100%;
     font-weight: bolder;
+    background-color: white;
     border-radius: 10px;
 }
 
-.card-licitacoes-abertas {
+.card-item {
     border-radius: 10px;
     padding: 20px 0 5px 0;
     background-color: #f4faff;
@@ -57,11 +29,31 @@ p {
     text-align: center;
 }
 
+.card-item :nth-child(1){
+}
 
-.card-licitacoes-abertas div {
+.card-item div {
     width: 100%;
 }
 
+.card-licitacao{
+    border-radius: 10px;
+    padding: 20px 0 5px 0;
+    background-color: rgb(193, 191, 191);
+    color: #40476d;
+    margin: 15px 0;
+    width: 300px;
+    height: 250px;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    text-align: center;
+}
+
+.card-licitacao div {
+    width: 100%;
+}
 
 /* going to add property */
 div.orca-company {

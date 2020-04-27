@@ -3,7 +3,6 @@ import { IoIosAlbums, IoIosDocument, IoIosArchive } from 'react-icons/io';
 import { Link } from 'react-router-dom';
 import orcaLogo from '../../assets/img/logo-site.png';
 import profile from '../../assets/perfil.jpg';
-import { Nav, Navbar, Form, FormControl } from 'react-bootstrap';
 
 import './styles.css';
 

@@ -1,15 +1,19 @@
-/* Bootstrap Margin reset ------------------- */
+/* Bootstrap & CSS Margin/Styles reset ------------------- */
 p {
     margin: 0;
 }
+a:hover {
+    text-decoration: none;
+}
 /* ------------------------------------------ */
 
-.card-container {
+section.card-container {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     width: 100%;
     font-weight: bolder;
+    background-color: #40476d;
 }
 
 .card-item {
@@ -55,7 +59,7 @@ div.company-data :nth-child(2) {
     font-size: 12px;
 }
 
-div.company-options {
+div.company-rate {
     font-size: 16px;
     display: flex;
     padding: 0 20px;
@@ -65,7 +69,7 @@ div.company-options {
     align-items: center;
 }
 
-div.company-options svg {
+div.company-rate svg {
     width: 25px;
     height: 20px;
 }

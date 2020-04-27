@@ -7,65 +7,6 @@ import './style.css'
 //import box from "../../assets/img/imgbox.png";
 
 export default class LicitacaoAberta extends Component {
-
-    constructor(props) {
-        super(props)
-        this.state = {
-            companies: [
-                {
-                    nome: "Digital House",
-                    email: "dh@dh.org",
-                    classificacao: 5
-                },
-                {
-                    nome: "Fastcash Digital Payments",
-                    email: "fastcash@fastcash.com",
-                    classificacao: 4
-                },
-                {
-                    nome: "iSeven Desenvolvimento Web",
-                    email: "isevendev@gmail.com",
-                    classificacao: 3
-                },
-                {
-                    nome: "Orca S.A.",
-                    email: "atendimento@orca.org",
-                    classificacao: 5
-                }
-            ]
-        }
-    }
-
-    // Function fills the classification given by param
-    rate = (grade = 4) => {
-        let classificacao = []
-        for (let i = 0; i < 5; i++) {
-            if (grade > i) {
-                classificacao.push(<IoIosStar />)
-            } else {
-                classificacao.push(<IoIosStarOutline />)
-            }
-        }
-        return classificacao
-    }
-
-    companyRender = () => {
-        return this.state.companies.forEach(company => <div className='card-item'>
-            <div className="orca-company">
-                <IoIosPeople />
-            </div>
-            <div className="company-data">
-                <p>company.nome</p>
-                <p>company.email</p>
-            </div>
-            <div className="company-options">
-                <p>{this.rate(company.classificacao)}</p>
-                <IoIosArrowDown />
-            </div>
-        </div>
-        )
-    }
-
     render() {
         return <>
             <div className="color-background dashboard-bg" />

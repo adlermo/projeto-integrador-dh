@@ -4,7 +4,12 @@ import NavBarDark from '../../components/NavBarDark';
 import Card from 'react-bootstrap/Card'
 import './style.css'
 import image from '../../assets/perfil.jpg';
-import { withFormik, Form, Field } from 'formik'
+import { Nav, Navbar, Form, FormControl } from 'react-bootstrap';
+import { IoMdWarning } from "react-icons/io";
+import { Link } from 'react-router-dom';
+
+import { IoIosPeople, IoIosArrowDown, IoIosStar, IoIosStarOutline, } from "react-icons/io";
+import { FaBoxOpen } from "react-icons/fa";
 
 
 
@@ -14,21 +19,26 @@ export default function profile() {
       <div className="color-background dashboard-bg" />
 
       <NavBarDark />
-
       <div className="main_container">
-        <Card className="cardProfile">
-          <Card-Titular>
-            <Card.Title>Responsável</Card.Title>
-          </Card-Titular>
-          <Card-Mother className="card">
-            <Card.Body>
-              <Card.Img className="profileImage" src={image} alt="Profile Image" />
-              <Card.Text>Ligia Albuquerque</Card.Text>
-              <Card.Text>Coordenadora</Card.Text>
-              <Card.Text>Varejista</Card.Text>
-            </Card.Body>
-          </Card-Mother>
-        </ Card>
+        <section className='card-container-dash'>
+          {/* TO DO: loop printing each card item */}
+
+            <div className='card-profile'>
+              <div>
+              <p>Responsável</p>
+              <img clasName= "image-profile" src={image} alt="image-profile" />
+              </div>
+              <div className="warning">
+                <p>Ligia Albuquerque</p>
+                <p>Coordenadora</p>
+              </div>
+              <div className="company-options">
+                <p>Editar</p>
+
+              </div>
+            </div>
+          {/* Loop closure */}
+        </section>
       </div>
     </>
   )

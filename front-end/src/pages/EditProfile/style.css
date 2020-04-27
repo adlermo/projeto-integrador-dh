@@ -1,32 +1,118 @@
 
-.cardProfile .card{
-    inline-size: auto;
-    background-color: white !important;
-    position: absolute !important;
-    justify-content: space-evenly !important;
-    background-color: white !important;
-    margin-top: 100px;
-    width: 500px !important;
+.dashboard-bg{    
+    background: var(--azul-escuro);
 }
 
-.card-titular{
-    background-color: white !important;
+.row{
+    margin-left: 0px;
+    background-color:blue;
 }
 
-card-titular{
-    background-color: white !important;
+.col-3{
+    float: left;
+    color:yellow;
 }
 
-.card-body{
-    background-color: white !important;
-}
-
-.card-text{
-    color: #40476d;
+.nav-flex-column-nav-pills{
+    margin-left: 20px;
     background-color: white;
 }
 
-.card-title{
+.tab{
+    background-color: red;
+}
+
+.pills{
+    background-color: yellow;
+}
+
+
+/* Bootstrap Margin reset ------------------- */
+p {
+    margin: 0;
+}
+/* ------------------------------------------ */
+
+.card-container-dash {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+    font-weight: bolder;
+    border-radius: 10px;
+}
+
+.card-profile {
+    border-radius: 10px;
+    padding: 20px 0 5px 0;
+    background-color: #f4faff;
     color: #40476d;
-    background-color: white;
+    margin: 15px 0;
+    width: 300px;
+    height: 500px;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    text-align: center;
+}
+
+
+.card-profile div {
+    width: 100%;
+}
+
+
+/* going to add property */
+div.warning{
+    color: #40476d;
+    height: 35%;
+    display: flex;
+}
+
+div.warning:nth-child(1) {
+    width: auto;
+}
+
+div.company-data {
+    display: flex;
+    flex-direction: row;
+    justify-content: auto;
+    font-size: 16px;
+}
+
+.card-warning {
+    border-radius: 10px;
+    padding: 20px 0 5px 0;
+    background-color: #f4faff;
+    color: #40476d;
+    margin: 15px 0;
+    width: 300px;
+    height: 250px;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    text-align: center;
+}
+
+div.company-options {
+    font-size: 16px;
+    display: flex;
+    padding: 0 20px;
+    height: 20%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.company-options svg {
+    width: 25px;
+    height: 20px;
+}
+
+img .image-profile{
+    color: #40476d;
+    height: 20%;
+    display: flex;
 }

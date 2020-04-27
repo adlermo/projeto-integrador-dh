@@ -2,9 +2,15 @@
 p {
     margin: 0;
 }
+
+p2 {
+    margin: 0;
+    font-size: 10px;
+}
 /* ------------------------------------------ */
 
 .card-container {
+    margin-top: 50px;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -17,8 +23,8 @@ p {
 .card-item {
     border-radius: 10px;
     padding: 20px 0 5px 0;
-    background-color: #f4faff;
-    color: #40476d;
+    background-color: #a7efec;
+    color: white;
     margin: 15px 0;
     width: 300px;
     height: 250px;
@@ -29,17 +35,10 @@ p {
     text-align: center;
 }
 
-.card-item :nth-child(1){
-}
-
-.card-item div {
-    width: 100%;
-}
 
 .card-licitacao{
     border-radius: 10px;
     padding: 20px 0 5px 0;
-    background-color: rgb(193, 191, 191);
     color: #40476d;
     margin: 15px 0;
     width: 300px;
@@ -51,9 +50,23 @@ p {
     text-align: center;
 }
 
-.card-licitacao div {
-    width: 100%;
+
+
+.card-item-vencedor{
+    border-radius: 10px;
+    padding: 20px 0 5px 0;
+    background-color: #07beb8;
+    color: white;
+    margin: 15px 0;
+    width: 300px;
+    height: 250px;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    text-align: center;
 }
+
 
 /* going to add property */
 div.orca-company {

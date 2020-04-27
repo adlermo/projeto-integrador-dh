@@ -87,12 +87,12 @@ export default class LicitacaoAberta extends Component {
                             <p>4 Celulares</p>
                         </div>
                         <div className="company-options">
-                            <IoIosArrowDown />
+                         <p2>Verificar Contrato</p2>
 
                         </div>
                     </div>
 
-                    <div className='card-item'>
+                    <div className='card-item-vencedor'>
                         <div className="orca-company">
                             <FaBoxOpen />
                             <p>Fornecedor X</p>

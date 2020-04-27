@@ -2,7 +2,6 @@ import React, { Component } from "react";
 
 import { IoIosPeople, IoIosArrowDown, IoIosStar, IoIosStarOutline, } from "react-icons/io";
 import { FaBoxOpen } from "react-icons/fa";
-import NavBarDark from '../../components/NavBarDark/index.js';
 import './style.css'
 import { Link } from 'react-router-dom';
 //import box from "../../assets/img/imgbox.png";
@@ -72,9 +71,9 @@ export default class LicitacaoAberta extends Component {
             <div className="main_container">
                 <section className='card-container-dash'>
                     {/* TO DO: loop printing each card item */}
-
+                    <Link to="/dashboard/licitacaoaberta">
                     <div className='card-licitacoes-abertas'>
-                        <Link to="/dashboard/licitacaoaberta">
+
                         <div className="orca-company">
                             <FaBoxOpen />
                             <p>Licitação A</p>
@@ -88,9 +87,11 @@ export default class LicitacaoAberta extends Component {
                             <IoIosArrowDown />
 
                         </div>
-                        </Link>
-                    </div>
 
+                    </div>
+                    </Link>
+
+                    <Link to="/dashboard/licitacaoaberta">
                     <div className='card-licitacoes-abertas'>
                         
                         <div className="orca-company">
@@ -106,7 +107,9 @@ export default class LicitacaoAberta extends Component {
 
                         </div>
                     </div>
+                    </Link>
 
+                    <Link to="/dashboard/licitacaoaberta">
                     <div className='card-licitacoes-abertas'>
                         <div className="orca-company">
                             <FaBoxOpen />
@@ -121,6 +124,7 @@ export default class LicitacaoAberta extends Component {
 
                         </div>
                     </div>
+                    </Link>
 
 
                     {/* Loop closure */}

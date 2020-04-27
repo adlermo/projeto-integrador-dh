@@ -79,7 +79,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 Tente reinstalar a dependência específica e/ou suas sub-dependencias
 
 ```
-yarn i *nomePackage*
+npm i *nomePackage*
 yarn add *nomePackage*
 ```
 

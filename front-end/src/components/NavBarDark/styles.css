@@ -30,7 +30,7 @@
 .wrapper .top_navbar .top_menu{
   width: calc(100% - 70px);
   height: 100%;
-  background: var(--branco);
+  background: var(--azul-escuro);
   border-top-right-radius: 20px;
   display: flex;
   justify-content: space-between;
@@ -151,4 +151,22 @@
 .wrapper.fechado .main_container{
     width: (100% - 70px);
     margin-left: 70px;
+}
+
+.profile{
+  display: block;
+  margin: 0 10px;
+  margin-top: 10px;
+  width: 50px;
+  height: 50px;
+  line-height: 35px;
+  text-align: center;
+  border: 3px solid white;
+  border-radius: 50%;
+  color: var(--azul-escuro);
+}
+
+.page{
+  color: white;
+  font-size: 20px;
 }

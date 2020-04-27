@@ -6,12 +6,14 @@ import Sobre from './pages/Sobre';
 import Contato from './pages/Contato';
 import Logon from './pages/Logon';
 import Register from './pages/Register';
+import Profile from './pages/Profile';
+import EditProfile from './pages/EditProfile';
 
 import Dashboard from './pages/Dashboard';
-import Licitacoes from './pages/Licitacoes';
+import LicitacaoAberta from './pages/LicitacaoAberta';
 // import Perfil from './pages/Perfil';
 
- const Routes = () => {
+function Routes() {
     return (
         <BrowserRouter>
             <Switch>
@@ -20,11 +22,13 @@ import Licitacoes from './pages/Licitacoes';
                 <Route  path="/contato" component={Contato} />
                 <Route  path="/logon" component={Logon} />
                 <Route  path="/register" component={Register} />
+                <Route  path="/profile" component={Profile} />
+                <Route  path="/editprofile" component={EditProfile} />
 
                 <Route  path="/dashboard" exact component={Dashboard} />
-                <Route  path="/dashboard/licitacoes" component={Licitacoes} />
+                <Route  path="/dashboard/licitacaoaberta" component={LicitacaoAberta}>
                 {/* <Route  path="/dashboard/perfil" component={Perfil} /> */}
-
+                </Route>
             </Switch>
         </BrowserRouter>
     );    

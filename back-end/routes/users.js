@@ -3,7 +3,10 @@ var router = express.Router();
 
 const userController = require("../controllers/userController");
 
- 
+/* LOGIN */
+router.post("/logon", userController.logon);
+
+
 router.get('/', userController.index);
 router.post("/cadastrarUsuario",userController.new);
 router.delete('/delete/:id',userController.delete);

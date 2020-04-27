@@ -1,0 +1,8 @@
+.overview {
+    padding: 50px 0;
+}
+
+
+.main_container .dark-blue{
+    background-color: var(--azul-escuro);
+}

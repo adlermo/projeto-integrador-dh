@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
 import NavBar from '../../components/NavBar';
 
-// import { FiLogIn } from 'react-icons/fi';
-
-// import api from "../../services/api";
+import api from "../../services/api";
 import './styles.css';
 
-export default function Logon(){
-    // const [id, setId] = useState('');
+export default function Logon() {
+    // const [email, setEmail] = useState('');
+    // const [senha, setSenha] = useState('');
+
     // const history = useHistory();
 
     // async function handleLogin(e) {
@@ -17,7 +17,7 @@ export default function Logon(){
 
     //     try{
     //         const response = await api.post('sessions', { id });
-            
+
     //         localStorage.setItem('ongId', id);
     //         localStorage.setItem('ongName', response.data.name);
 
@@ -30,7 +30,7 @@ export default function Logon(){
     return (
         <>
 
-            <div className="img-background img--logon">                
+            <div className="img-background img--logon">
                 {/* <img src={imgRegister} alt="" /> */}
             </div>
 
@@ -50,19 +50,21 @@ export default function Logon(){
 
                         <div className="contato-form">
                             <form>
-                                
+
 
                                 <input
                                     type="email"
                                     placeholder="Digite seu melhor e-mail"
                                 />
-                                
+
                                 <input
                                     type="password"
                                     placeholder="Digite sua senha"
-                                />                             
+                                />
 
-                                <button className="button" type="submit">Enviar</button>
+                                <Link className='back-link' to='/dashboard/' >
+                                    <button className="button" type="submit">Enviar</button>
+                                </Link>
 
                             </form>
                         </div>
@@ -70,6 +72,6 @@ export default function Logon(){
                 </section>
             </div>
 
-        </>   
+        </>
     );
 }

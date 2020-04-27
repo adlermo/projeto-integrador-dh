@@ -1,14 +1,12 @@
 import React, { Component, useState } from 'react';
-import { IoIosHome, IoIosInformationCircle, IoMdCart, IoMdText, IoIosLogIn } from 'react-icons/io';
+import { IoIosAlbums, IoIosDocument, IoIosArchive } from 'react-icons/io';
 import { Link } from 'react-router-dom';
 import orcaLogo from '../../assets/img/logo-site.png';
-// import profile from '../../assets/img/perfil.jpg';
+import profile from '../../assets/perfil.jpg';
 
 import './styles.css';
 
-export default function NavBar(props) {
-
-    const ativarMenu = menu => (props.pagina == menu) ? "ativo" : "";
+export default function NavBar() {
 
     const [expandir, setExpandir] = useState("fechado");
     function menuAtivo() {
@@ -30,25 +28,13 @@ export default function NavBar(props) {
                     <div className="logo">
                         <img src={orcaLogo} alt="home-site" />
                     </div>
+
                     <ul>
                         <li>
-                            <Link to="/"
-                                className={ativarMenu("home")}> Home
+                            <Link to="/profile">
+                                <img className="profile" src={profile} />
                             </Link>
                         </li>
-
-                        <li>
-                            <Link to="/sobre"
-                                className={ativarMenu("sobre")}> Sobre
-                            </Link>
-                        </li>
-
-                        <li>
-                            <Link to="/contato"
-                                className={ativarMenu("contato")}> Contato
-                            </Link>
-                        </li>
-
                     </ul>
                 </div>
             </div>
@@ -56,23 +42,23 @@ export default function NavBar(props) {
             <div className="sidebar">
                 <ul>
                     <li>
-                        <Link to="/">
-                            <span className="icon"><IoIosHome /> </span>
-                            <span className="title">Home</span>
+                        <Link to="/dashboard/overview">
+                            <span className="icon"><IoIosAlbums /> </span>
+                            <span className="title">Dashboard</span>
                         </Link>
                     </li>
 
                     <li>
-                        <Link to="/logon">
-                            <span className="icon"><IoMdCart /></span>
-                            <span className="title">Orçamentos</span>
+                        <Link to="/dashboard/licitacaoaberta">
+                            <span className="icon"><IoIosDocument /></span>
+                            <span className="title">Contratos</span>
                         </Link>
                     </li>
 
                     <li>
-                        <Link to="/logon">
-                            <span className="icon"><IoIosLogIn /></span>
-                            <span className="title">Entrar</span>
+                        <Link to="/dashboard/orcamentos">
+                            <span className="icon"><IoIosArchive /></span>
+                            <span className="title">Finalizados</span>
                         </Link>
                     </li>
                 </ul>

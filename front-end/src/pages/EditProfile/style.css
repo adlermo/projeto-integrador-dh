@@ -42,7 +42,46 @@ p {
     border-radius: 10px;
 }
 
-.card-licitacoes-abertas {
+.card-profile {
+    border-radius: 10px;
+    padding: 20px 0 5px 0;
+    background-color: #f4faff;
+    color: #40476d;
+    margin: 15px 0;
+    width: 300px;
+    height: 500px;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    text-align: center;
+}
+
+
+.card-profile div {
+    width: 100%;
+}
+
+
+/* going to add property */
+div.warning{
+    color: #40476d;
+    height: 35%;
+    display: flex;
+}
+
+div.warning:nth-child(1) {
+    width: auto;
+}
+
+div.company-data {
+    display: flex;
+    flex-direction: row;
+    justify-content: auto;
+    font-size: 16px;
+}
+
+.card-warning {
     border-radius: 10px;
     padding: 20px 0 5px 0;
     background-color: #f4faff;
@@ -57,37 +96,6 @@ p {
     text-align: center;
 }
 
-
-.card-licitacoes-abertas div {
-    width: 100%;
-}
-
-
-/* going to add property */
-div.orca-company {
-    color: #40476d;
-    height: 35%;
-    display: flex;
-}
-
-div.orca-company :nth-child(1) {
-    border-radius: 20%;
-    background-color: rgb(218, 218, 218);
-    height: 50%;
-    width: auto;
-    margin-left: 30px;
-  
-}
-
-div.company-data {
-    display: flex;
-    flex-direction: column;
-    justify-content: auto;
-    font-size: 16px;
-    
-}
-
-
 div.company-options {
     font-size: 16px;
     display: flex;
@@ -101,4 +109,10 @@ div.company-options {
 div.company-options svg {
     width: 25px;
     height: 20px;
+}
+
+img .image-profile{
+    color: #40476d;
+    height: 20%;
+    display: flex;
 }

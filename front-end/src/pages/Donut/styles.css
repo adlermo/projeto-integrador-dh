@@ -1,0 +1,18 @@
+.donut {
+    display: flex;
+    justify-content: space-evenly;
+    background: #40476d;
+    color: white;
+
+    height: 50vh;
+    padding: 3% 0 ;
+    border-radius: 10px;
+}
+
+.donut > * {
+    background-color: white;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+}

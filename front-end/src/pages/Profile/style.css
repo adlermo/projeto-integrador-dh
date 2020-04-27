@@ -42,7 +42,7 @@ p {
     border-radius: 10px;
 }
 
-.card-licitacoes-abertas {
+.card-profile {
     border-radius: 10px;
     padding: 20px 0 5px 0;
     background-color: #f4faff;
@@ -57,22 +57,21 @@ p {
     text-align: center;
 }
 
+.
 
-.card-licitacoes-abertas div {
+.card-profile div {
     width: 100%;
 }
 
 
 /* going to add property */
-div.orca-company {
+div.warning{
     color: #40476d;
     height: 35%;
     display: flex;
 }
 
-div.orca-company :nth-child(1) {
-    border-radius: 20%;
-    background-color: rgb(218, 218, 218);
+div.warning:nth-child(1) {
     height: 50%;
     width: auto;
     margin-left: 30px;
@@ -81,12 +80,25 @@ div.orca-company :nth-child(1) {
 
 div.company-data {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: auto;
     font-size: 16px;
-    
 }
 
+.card-warning {
+    border-radius: 10px;
+    padding: 20px 0 5px 0;
+    background-color: #f4faff;
+    color: #40476d;
+    margin: 15px 0;
+    width: 300px;
+    height: 250px;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    text-align: center;
+}
 
 div.company-options {
     font-size: 16px;

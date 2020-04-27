@@ -9,7 +9,7 @@ export default function Sobre() {
 
     return (
         <>
-            <NavBar />  
+            <NavBar pagina={"sobre"} />  
 
             <div className="img-background img--sobre">   
             

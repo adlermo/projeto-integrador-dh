@@ -24,8 +24,8 @@ function Routes() {
                 <Route path="/contato" component={Contato} />
                 <Route path="/logon" component={Logon} />
                 <Route path="/register" component={Register} />
-                <Route path="/profile" component={Profile} />
                 <Route path="/editprofile" component={EditProfile} />
+                <Route path="/profile" component={Profile} />
 
                 <Route path="/dashboard" exact component={Dashboard} />
                 <Route path="/dashboard/licitacaoaberta" component={LicitacaoAberta} />

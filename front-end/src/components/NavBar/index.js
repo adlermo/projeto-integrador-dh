@@ -7,7 +7,7 @@ import orcaLogo from '../../assets/img/logo-site.png';
 import './styles.css';
 
 export default function NavBar(props) {
-    
+
     const ativarMenu = menu => (props.pagina == menu) ? "ativo" : "";
 
     const [expandir, setExpandir] = useState("fechado");
@@ -28,7 +28,7 @@ export default function NavBar(props) {
                 </div>
                 <div className="top_menu">
                     <div className="logo">
-                        <img src={orcaLogo} alt="home-site" />                        
+                        <img src={orcaLogo} alt="home-site" />
                     </div>
                     <ul>
                         <li>
@@ -37,16 +37,16 @@ export default function NavBar(props) {
                             </Link>
                         </li>
 
-                        <li> 
-                            <Link to="/sobre" 
+                        <li>
+                            <Link to="/sobre"
                                 className={ativarMenu("sobre")}> Sobre
-                            </Link> 
+                            </Link>
                         </li>
 
-                        <li> 
-                            <Link to="/contato" 
-                                className={ativarMenu("contato")}> Contato 
-                            </Link> 
+                        <li>
+                            <Link to="/contato"
+                                className={ativarMenu("contato")}> Contato
+                            </Link>
                         </li>
 
                     </ul>
@@ -63,7 +63,7 @@ export default function NavBar(props) {
                     </li>
 
                     <li>
-                        <Link to="/orcamentos">
+                        <Link to="/logon">
                             <span className="icon"><IoMdCart /></span>
                             <span className="title">Orçamentos</span>
                         </Link>

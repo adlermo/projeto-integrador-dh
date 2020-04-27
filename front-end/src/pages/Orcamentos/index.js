@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import ReactApexChart from 'react-apexcharts'
+import Dashboard from '../Dashboard';
 
 export default class Orcamentos extends Component {
     constructor(props) {
@@ -75,11 +76,11 @@ export default class Orcamentos extends Component {
 
 
     render() {
-        return <>
-            <div id="chart" className="item">
-                <h1 style={{textAlign: 'center'}}>Visão Geral dos Orçamentos</h1>
+        return <Dashboard>
+            <div id="chart" className="item" style={{ backgroundColor: 'white' }}>
+                <h1 style={{ textAlign: 'center' }}>Visão Geral dos Orçamentos</h1>
                 <ReactApexChart options={this.state.options} series={this.state.series} type="bar" height={350} />
             </div>
-        </>
+        </Dashboard >
     }
 }

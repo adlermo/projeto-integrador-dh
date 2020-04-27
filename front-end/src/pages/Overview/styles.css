@@ -9,11 +9,8 @@ a:hover {
 
 section.card-container {
     display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
-    flex-wrap: wrap;
-    width: 100%;
-    font-weight: bolder;
-    background-color: #40476d;
 }
 
 .card-item {

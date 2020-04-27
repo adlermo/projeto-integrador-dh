@@ -42,21 +42,21 @@ export default function NavBar() {
             <div className="sidebar">
                 <ul>
                     <li>
-                        <Link to="/dashboard">
+                        <Link to="/dashboard/overview">
                             <span className="icon"><IoIosAlbums /> </span>
                             <span className="title">Dashboard</span>
                         </Link>
                     </li>
 
                     <li>
-                        <Link to="#">
+                        <Link to="/dashboard/licitacaoaberta">
                             <span className="icon"><IoIosDocument /></span>
                             <span className="title">Contratos</span>
                         </Link>
                     </li>
 
                     <li>
-                        <Link to="#">
+                        <Link to="/dashboard/orcamentos">
                             <span className="icon"><IoIosArchive /></span>
                             <span className="title">Finalizados</span>
                         </Link>

@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import { IoIosPeople, IoIosArrowForward, IoIosStar, IoIosStarOutline } from "react-icons/io";
 
 import './styles.css'
+import Dashboard from "../Dashboard";
 
 export default class Overview extends Component {
     constructor(props) {
@@ -82,29 +83,27 @@ export default class Overview extends Component {
             return b.classificacao - a.classificacao
         })
 
-        return <>
-            <section className='card-container'>
-                {/* Loop printing each card item */}
+        return <Dashboard className='card-container'>
+            {/* Loop printing each card item */}
 
-                {companies.map(company => < /*a href=''  onClick={this.handleClick()} */ >
-                    <div className='card-item'>
-                        <div className="company-profile">
-                            <IoIosPeople />
-                        </div>
-                        <div className="company-data">
-                            <p>{company.nome}</p>
-                            <p>{company.email}</p>
-                        </div>
-                        <div className="company-rate">
-                            <p>{this.rate(company.classificacao)}</p>
-                            <IoIosArrowForward />
-                        </div>
+            {companies.map(company => < /*a href=''  onClick={this.handleClick()} */ >
+                <div className='card-item'>
+                    <div className="company-profile">
+                        <IoIosPeople />
                     </div>
-                </ /*a*/ >
-                )}
+                    <div className="company-data">
+                        <p>{company.nome}</p>
+                        <p>{company.email}</p>
+                    </div>
+                    <div className="company-rate">
+                        <p>{this.rate(company.classificacao)}</p>
+                        <IoIosArrowForward />
+                    </div>
+                </div>
+            </ /*a*/ >
+            )}
 
-                {/* Loop closure */}
-            </section>
-        </>
+            {/* Loop closure */}
+        </Dashboard>
     }
 } 

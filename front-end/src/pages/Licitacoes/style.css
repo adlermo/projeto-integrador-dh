@@ -1,0 +1,119 @@
+
+.dashboard-bg{    
+    background: var(--azul-escuro);
+}
+
+.row{
+    margin-left: 0px;
+    background-color:blue;
+}
+
+.col-3{
+    float: left;
+    color:yellow;
+}
+
+.nav-flex-column-nav-pills{
+    margin-left: 20px;
+    background-color: white;
+}
+
+.tab{
+    background-color: red;
+}
+
+.pills{
+    background-color: yellow;
+}
+
+.card-deck{
+    display: flex;
+    justify-content: space-evenly;
+    width: 1000px;
+    height: 400px;
+    background-color: white;
+    margin-top: 100px;
+    margin-right: 100px;
+    border-radius: 10px;
+}
+
+.card{
+    margin-left: 600px;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 350px;
+    max-width: 200px;
+    background-color: #07beb8;
+    box-shadow: 0px 0px 10px rgb(132, 132, 132);
+    transform: scale(1);
+    animation: pulse 2s infinite;
+    overflow: hidden;
+}
+
+/*.card:nth-of-type(2){
+    background: red;
+    }
+*/
+.card:hoover{
+    background-color: black;
+}
+
+
+.card-body{
+    max-width: 200px;
+    background-color: #07beb8;
+}
+
+.card-footer{
+    display: flex;
+    justify-content: center;
+    color: white;
+    background-color: #07beb8;
+}
+
+.card-title{
+    color: white;
+    background-color: #07beb8;;
+}
+
+.card-text{
+    background-color: #07beb8;
+    color: white;
+}
+
+.text-muted{
+    color: white;
+    background-color: #07beb8;
+}
+
+.top{
+    float: left;
+    background-color: #45d2cd;
+    height: 50px;
+    width: 50px;
+    margin-top: 10px;
+}
+
+.arrowDown{
+    background-color: #07beb8; 
+}
+
+.Col{
+    background-color: red;
+}
+
+#Row{
+    background-color:Blue;
+}
+
+Card-Header{
+    align-items: flex-end;
+    justify-content: space-evenly;
+    display: flex;
+    background-color: #07beb8; 
+}
+Card-Mother{
+    color:blue;
+}
+

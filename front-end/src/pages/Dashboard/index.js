@@ -1,22 +1,23 @@
 import React from 'react'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NavBarDark from '../../components/NavBarDark/index.js';
+import NavBarDark from '../../components/NavBarDark';
+import Orcamentos from '../../pages/Orcamentos';
 
 import './styles.css'
-
-import Licitacoes from '../../components/Licitacoes'
 
 export default function Dashboard() {
     return (
         <>
-            <div className="color-background dashboard-bg"/>             
+            <div className="color-background dashboard-bg" />
 
-            <NavBarDark />
+            <NavBarDark active='Overview' />
 
-            <div className="main_container">
-               <Licitacoes />
-            </div>
+            <>
+                <div className='main_container overview'>
+                    <Orcamentos />
+                </div>
+            </>
 
         </>
     )

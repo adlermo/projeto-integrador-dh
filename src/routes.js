@@ -27,7 +27,7 @@ function Routes() {
                 <Route path="/editprofile" component={EditProfile} />
                 <Route path="/profile" component={Profile} />
 
-                <Route path="/dashboard" exact component={Dashboard} />
+                <Route path="/dashboard" exact component={Overview} />
                 <Route path="/dashboard/licitacaoaberta" component={LicitacaoAberta} />
                 <Route path="/dashboard/overview" component={Overview} />
                 <Route path="/dashboard/orcamentos" component={Orcamentos} />

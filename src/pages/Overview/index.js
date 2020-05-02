@@ -73,9 +73,9 @@ export default class Overview extends Component {
         return classificacao
     }
 
-    // handleClick = () => {
-    //     console.log(this.state.companies)
-    // }
+    handleClick = (e) => {
+        console.log('Fui clicado')
+    }
 
     render() {
         // Code statement sorts the obj by classification
@@ -83,25 +83,26 @@ export default class Overview extends Component {
             return b.classificacao - a.classificacao
         })
 
-        return <Dashboard className='card-container'>
+        return <Dashboard >
             {/* Loop printing each card item */}
-
-            {companies.map(company => < /*a href=''  onClick={this.handleClick()} */ >
-                <div className='card-item'>
-                    <div className="company-profile">
-                        <IoIosPeople />
+            <div className='card-container'>
+                {companies.map(company => <a href='' onClick={this.handleClick(this)}>
+                    <div className='card-item'>
+                        <div className="company-profile">
+                            <IoIosPeople />
+                        </div>
+                        <div className="company-data">
+                            <p>{company.nome}</p>
+                            <p>{company.email}</p>
+                        </div>
+                        <div className="company-rate">
+                            <p>{this.rate(company.classificacao)}</p>
+                            <IoIosArrowForward />
+                        </div>
                     </div>
-                    <div className="company-data">
-                        <p>{company.nome}</p>
-                        <p>{company.email}</p>
-                    </div>
-                    <div className="company-rate">
-                        <p>{this.rate(company.classificacao)}</p>
-                        <IoIosArrowForward />
-                    </div>
-                </div>
-            </ /*a*/ >
-            )}
+                </a>
+                )}
+            </div>
 
             {/* Loop closure */}
         </Dashboard>

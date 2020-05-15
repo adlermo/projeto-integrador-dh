@@ -2,7 +2,7 @@ import React, { Component, useState } from 'react';
 import { IoIosAlbums, IoIosDocument, IoIosArchive } from 'react-icons/io';
 import { Link } from 'react-router-dom';
 import orcaLogo from '../../assets/img/logo-site.png';
-import profile from '../../assets/perfil.jpg';
+import profile from '../../assets/img/perfil.jpg';
 
 import './styles.css';
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Nav, Navbar, Form, FormControl } from 'react-bootstrap';
 import './style.css'
-import perfil from "../../assets/perfil.jpg"
+import perfil from "../../assets/img/perfil.jpg"
 
 export const Navigationbar = () => (
     <Navbar expand="lg">

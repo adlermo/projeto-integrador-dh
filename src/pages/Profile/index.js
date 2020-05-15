@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBarDark from '../../components/NavBarDark';
 import Card from 'react-bootstrap/Card'
 import './style.css'
-import image from '../../assets/perfil.jpg';
+import image from '../../assets/img/perfil.jpg';
 import { Nav, Navbar, Form, FormControl } from 'react-bootstrap';
 import { IoMdWarning } from "react-icons/io";
 import { Link } from 'react-router-dom';

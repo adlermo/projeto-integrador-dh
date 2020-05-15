@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBarDark from '../../components/NavBarDark';
 
 import './style.css'
-import image from '../../assets/perfil.jpg';
+import image from '../../assets/img/perfil.jpg';
 
 
 

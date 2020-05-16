@@ -26,7 +26,7 @@ const Dashboard = () => {
     const PegarLicitacoes = ListaLicitacoes => {
         return (
             <Grid item xs={12} sm={6} md={4}>
-                <Link className={classes.LicitacaoAberta} to="/LicitacaoAberta">
+                <Link className={classes.LicitacaoAberta} to="/licitacao_aberta">
                 <CardsLicitacao {...ListaLicitacoes} />
                 </Link>
             </ Grid >
@@ -43,7 +43,9 @@ return (
 
     <Grid container spacing={4} className={classes.gridContainer}>
         <Grid item xs={12} sm={6} md={4}>
+        <Link className={classes.LicitacaoAberta} to="/abrir_nova_licitacao">
             <CardNovaLicitacao />
+            </ Link>
         </ Grid>
         {ListaLicitacoes.map(FazerListas => PegarLicitacoes(FazerListas))}
     </Grid>

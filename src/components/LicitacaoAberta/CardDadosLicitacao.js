@@ -12,10 +12,10 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 
 const useStyles = makeStyles({
     root: {
-    background: 'grey',
+    background: 'white',
     border: 0,
     borderRadius: 3,
-    boxShadow: '0 3px 5px 2px grey',
+    boxShadow: '0 3px 5px 2px white',
     color: 'white',
     padding: '0 30px',
   },

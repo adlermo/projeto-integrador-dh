@@ -12,12 +12,14 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 
 const useStyles = makeStyles({
     root: {
+    maxWidth: 300,
     background: '#07BEB8',
     border: 0,
     borderRadius: 3,
     boxShadow: '0 3px 5px 2px grey',
     color: 'white',
     padding: '0 30px',
+    
   },
     Subtexto: {
       marginLeft: '15px',
@@ -26,7 +28,7 @@ const useStyles = makeStyles({
     img: {
       backgroundColor: '#14D0C9',
       borderRadius: 3,
-      marginLeft: '-12px',
+      marginLeft: 0,
     }
 });
 

@@ -1,59 +1,53 @@
-import React from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React from 'react';
+import { Link } from 'react-router-dom'
+import CardsLicitacao from '../../components/CardsLicitacao';
+import CardPerfil from '../../components/CardPerfil';
+import { Grid } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+import Perfis from './Perfis'
 import NavBarDark from '../../components/NavBarDark';
-import Card from 'react-bootstrap/Card'
-import './style.css'
-import image from '../../assets/img/perfil.jpg';
-import { Nav, Navbar, Form, FormControl } from 'react-bootstrap';
-import { IoMdWarning } from "react-icons/io";
-import { Link } from 'react-router-dom';
-
-import { IoIosPeople, IoIosArrowDown, IoIosStar, IoIosStarOutline, } from "react-icons/io";
-import { FaBoxOpen } from "react-icons/fa";
 
 
+const useStyles = makeStyles({
+    gridContainer: {
+        paddingLeft: '40px',
+        paddingRight: '40px',
+        paddingTop: '20px',
+        justifyContent: 'center',
+    },
+    LicitacaoAberta: {
+        textDecoration: 'none',
+    }
+})
 
-export default function profile() {
-  return (
+const Profile = () => {
+    
+    const classes = useStyles();
+    const PegarLicitacoes = Perfis => {
+        return (
+            <Grid item xs={12} sm={6} md={4}>
+                <CardPerfil {...Perfis} />
+            </ Grid >
+        )
+    };
+
+return (
     <>
-      <div className="color-background dashboard-bg" />
+    <div className="color-background dashboard-bg" />
 
-      <NavBarDark />
-      <div className="main_container">
+    <NavBarDark />
+    <div className="main_container">
         <section className='card-container-dash'>
-          {/* TO DO: loop printing each card item */}
 
-          <Link to="/editprofile">
-            <div className='card-profile'>
-              <div>
-              <p>Responsável</p>
-              <img clasName= "image-profile" src={image} alt="image-profile" />
-              </div>
-              <div className="warning">
-                <p>Ligia Albuquerque</p>
-                <p>Coordenadora</p>
-              </div>
-              <div className="company-options">
-                <p>Editar</p>
+    <Grid container spacing={4} className={classes.gridContainer}>
 
-              </div>
-            </div>
-          </Link>
+        {Perfis.map(FazerListas => PegarLicitacoes(FazerListas))}
 
-          <div className='card-warning'>
-
-            <div className="warning">
-              <p>Avisos</p>
-            </div>
-            <div className="company-data">
-              <p><IoMdWarning />Verificar contrato</p>
-              <p><IoMdWarning />Documentos Solicitados</p>
-            </div>
-
-          </div>
-          {/* Loop closure */}
-        </section>
+    </Grid>
+    </section>
       </div>
     </>
-  )
+)
 }
+
+export default Profile;

@@ -7,6 +7,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import ListaDeLicitacoes from './FornecedoresQueAtenderam.js'
 import DadosLicitacao from './DadosLicitacao.js'
 import NavBarDark from '../../components/NavBarDark';
+import Button from '@material-ui/core/Button';
+import SaveIcon from '@material-ui/icons/Save';
+import GavelIcon from '@material-ui/icons/Gavel';
 
 const useStyles = makeStyles({
     gridContainer: {
@@ -20,10 +23,28 @@ const useStyles = makeStyles({
         justifyContent: 'center',
         backgroundColor: 'white',
         borderRadius: 3,
-
+        display: 'flex',
+        flexFlow: 'row nowrap',
     },
     LicitacaoAberta: {
         textDecoration: 'none',
+    },
+    gridInfo: {
+        marginTop: '20px',
+        marginLeft: '20px',
+        marginRight: '20px',
+        paddingLeft: '40px',
+        paddingRight: '100px',
+        paddingTop: '20px',
+        paddingBottom: '20px',
+        justifyContent: 'left',
+        borderRadius: 3,
+    },
+    button: {
+        backgroundColor: 'white',
+        '&:hover': {
+            background: '#98dfea',
+          }
     }
 })
 
@@ -58,6 +79,20 @@ const LicitacaoEmAberto = () => {
             {ListaDeLicitacoes.map(FazerListas => PegarLicitacoes(FazerListas))}
             
         </Grid>
+        <Grid container spacing={4} className={classes.gridInfo}>
+        <Link>
+        <Button
+        variant="contained"
+        color="primary"
+        size="large"
+        className={classes.button}
+        startIcon={<GavelIcon style={{ color: '#40476d' }} />}
+        style={{ color: '#40476d' }}
+      >
+        Contrato
+      </Button>
+      </Link>
+      </Grid>
         </section>
       </div>
     </>

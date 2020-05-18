@@ -12,7 +12,7 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 
 const useStyles = makeStyles({
     root: {
-    maxWidth: 300,
+    maxWidth: 200,
     background: '#07BEB8',
     border: 0,
     borderRadius: 3,

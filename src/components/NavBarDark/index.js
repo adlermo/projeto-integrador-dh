@@ -42,7 +42,7 @@ export default function NavBar() {
             <div className="sidebar">
                 <ul>
                     <li>
-                        <Link to="/dashboard/overview">
+                        <Link to="/dashboard">
                             <span className="icon"><IoIosAlbums /> </span>
                             <span className="title">Dashboard</span>
                         </Link>

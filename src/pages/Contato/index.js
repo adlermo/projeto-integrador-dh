@@ -20,7 +20,7 @@ export default function Contato() {
                 <div className="contato">
                     <div className="contato-info">
                         <h1>Contato</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique quibusdam quae voluptates pariatur odio iste, officia, dicta amet ab eligendi.</p>
+                        <p>Bem-vindo ao orca.com! Para acessar por completo o site, preencha o formulário de cadastro abaixo. Todos os campos são obrigatórios.</p>
                         <Link className="back-link" to="/">
                             <FiArrowLeft size={16} color="#07beb8" />
                                 Home

@@ -38,7 +38,7 @@ export default function Sobre() {
 
                         <div className="sobre-item azul">
                             <h2>Valores</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, molestiae voluptatibus sed nostrum dignissimos.</p>
+                            <p>1. Integridade e honestidade, 2. Empenho para com os clientes, parceiros e tecnologia, 3. Dedicação para com a qualidade e melhoramento continuo da plataforma, 4. Assumir plena responsabilidade dos compromissos, resultados e da qualidade perante os clientes, acionistas, parceiros e colaboradores.</p>
                             <img src={servicesSite} alt="home-site" />
                         </div>
                     </div>

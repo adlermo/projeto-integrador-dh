@@ -32,7 +32,7 @@ export default function Sobre() {
 
                         <div className="sobre-item azul">
                             <h2>Visão</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, molestiae voluptatibus sed nostrum dignissimos.</p>
+                            <p>Ser a melhor empresa de cotação do Brasil!</p>
                             <img src={servicesSite} alt="home-site" />
                         </div>
 

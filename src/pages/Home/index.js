@@ -18,7 +18,7 @@ export default function home() {
                     <div className="home">
                         <div className="home-info">
                             <h1>Home</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi dolores sit quis voluptatibus aut dolorem ea nemo! Doloremque itaque numquam, vel porro unde dolor? Aut aspernatur accusantium dolor eveniet tenetur!</p>
+                            <p>Realizar uma boa Gestão Orçamentária é um processo essencial para o sucesso e estabilidade de qualquer empresa no mercado. Orca é um sistema web que organiza e automatiza suas cotações, podendo ser acessado por qualquer dispositivo conectado à internet.</p>
                             
                         </div>
 
